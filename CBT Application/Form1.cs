@@ -23,12 +23,12 @@ namespace CBT_Application
         }
 
         public List<int> hasilRandom = new List<int>();
-        public List<string> jawabanSiswa = new List<string>();
+        public string[] jawabanSiswa = new string[10];
         public List<bool> benarSalah = new List<bool>();
         public int nomorSekarang = 1;
         private void Form1_Load(object sender, EventArgs e)
         {
-            // Ambil Soal dari File
+            // Ambil Soal dari File JSON
             try
             {
                 if (File.Exists(filename))
@@ -79,6 +79,25 @@ namespace CBT_Application
             {
                 btnPrevious.Enabled = true;
                 btnNext.Enabled = true;
+            }
+            for (int i=0; i<10; i++)
+            {
+                if (jawabanSiswa[i] != null)
+                {
+                    switch (i)
+                    {
+                        case 0: btn1.BackColor = Color.LightGreen; break;
+                        case 1: btn2.BackColor = Color.LightGreen; break;
+                        case 2: btn3.BackColor = Color.LightGreen; break;
+                        case 3: btn4.BackColor = Color.LightGreen; break;
+                        case 4: btn5.BackColor = Color.LightGreen; break;
+                        case 5: btn6.BackColor = Color.LightGreen; break;
+                        case 6: btn7.BackColor = Color.LightGreen; break;
+                        case 7: btn8.BackColor = Color.LightGreen; break;
+                        case 8: btn9.BackColor = Color.LightGreen; break;
+                        case 9: btn10.BackColor = Color.LightGreen; break;
+                    }
+                }
             }
         }
 
@@ -142,6 +161,26 @@ namespace CBT_Application
         {
             nomorSekarang++;
             loadSoal(nomorSekarang, hasilRandom[nomorSekarang - 1]);
+        }
+
+        private void btnA_Click(object sender, EventArgs e)
+        {
+            jawabanSiswa[nomorSekarang - 1] = "A"; loadSoal(nomorSekarang, hasilRandom[nomorSekarang - 1]);
+        }
+
+        private void btnB_Click(object sender, EventArgs e)
+        {
+            jawabanSiswa[nomorSekarang - 1] = "B"; loadSoal(nomorSekarang, hasilRandom[nomorSekarang - 1]);
+        }
+
+        private void btnC_Click(object sender, EventArgs e)
+        {
+            jawabanSiswa[nomorSekarang - 1] = "C"; loadSoal(nomorSekarang, hasilRandom[nomorSekarang - 1]);
+        }
+
+        private void btnD_Click(object sender, EventArgs e)
+        {
+            jawabanSiswa[nomorSekarang - 1] = "D"; loadSoal(nomorSekarang, hasilRandom[nomorSekarang - 1]);
         }
     }
 }
