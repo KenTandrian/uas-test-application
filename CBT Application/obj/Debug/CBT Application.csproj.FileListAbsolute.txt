@@ -1,0 +1,11 @@
+C:\Users\User\Source\Repos\KenTandrian\uas-test-application\CBT Application\bin\Debug\CBT Application.exe.config
+C:\Users\User\Source\Repos\KenTandrian\uas-test-application\CBT Application\bin\Debug\CBT Application.exe
+C:\Users\User\Source\Repos\KenTandrian\uas-test-application\CBT Application\bin\Debug\CBT Application.pdb
+C:\Users\User\Source\Repos\KenTandrian\uas-test-application\CBT Application\obj\Debug\CBT Application.csproj.AssemblyReference.cache
+C:\Users\User\Source\Repos\KenTandrian\uas-test-application\CBT Application\obj\Debug\CBT Application.csproj.SuggestedBindingRedirects.cache
+C:\Users\User\Source\Repos\KenTandrian\uas-test-application\CBT Application\obj\Debug\CBT_Application.Form1.resources
+C:\Users\User\Source\Repos\KenTandrian\uas-test-application\CBT Application\obj\Debug\CBT_Application.Properties.Resources.resources
+C:\Users\User\Source\Repos\KenTandrian\uas-test-application\CBT Application\obj\Debug\CBT Application.csproj.GenerateResource.cache
+C:\Users\User\Source\Repos\KenTandrian\uas-test-application\CBT Application\obj\Debug\CBT Application.csproj.CoreCompileInputs.cache
+C:\Users\User\Source\Repos\KenTandrian\uas-test-application\CBT Application\obj\Debug\CBT Application.exe
+C:\Users\User\Source\Repos\KenTandrian\uas-test-application\CBT Application\obj\Debug\CBT Application.pdb
