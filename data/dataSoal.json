@@ -1,0 +1,101 @@
+[
+    {
+        "NomorSoal": 1,
+        "KalimatSoal": "Berikut sintaks yang benar untuk menghasilkan output Hello World di C++?",
+        "PilihanA": "cout<<\"Hello World\";",
+        "PilihanB": "Pilihan B",
+        "PilihanC": "Pilihan C",
+        "PilihanD": "Pilihan D",
+        "JawabanSoal": "C"
+    },
+    {
+        "NomorSoal": 2,
+        "KalimatSoal": "Bagaimana cara membuat komentar di C++?",
+        "PilihanA": "/* Ini komentar",
+        "PilihanB": "Pilihan B",
+        "PilihanC": "Pilihan C",
+        "PilihanD": "Pilihan D",
+        "JawabanSoal": "B"
+    },
+    {
+        "NomorSoal": 3,
+        "KalimatSoal": "Setiap perintah di dalam C++ selalu diakhiri dengan tanda?",
+        "PilihanA": "Pilihan A",
+        "PilihanB": "Pilihan B",
+        "PilihanC": "Pilihan C",
+        "PilihanD": "Pilihan D",
+        "JawabanSoal": "A"
+    },
+    {
+        "NomorSoal": 4,
+        "KalimatSoal": "Perintah untuk menginput suatu nilai dari keyboard untuk di proses di dalam program adalah?",
+        "PilihanA": "Pilihan A",
+        "PilihanB": "Pilihan B",
+        "PilihanC": "Pilihan C",
+        "PilihanD": "Pilihan D",
+        "JawabanSoal": "D"
+    },
+    {
+        "NomorSoal": 5,
+        "KalimatSoal": "Suatu tempat yang berfungsi untuk menampung data atau nilai yang dapat berubah-ubah selama program berjalan tersebut",
+        "PilihanA": "Pilihan A",
+        "PilihanB": "Pilihan B",
+        "PilihanC": "Pilihan C",
+        "PilihanD": "Pilihan D",
+        "JawabanSoal": "A"
+    },
+    {
+        "NomorSoal": 6,
+        "KalimatSoal": "Tipe data apa yang digunakan untuk menyimpan variabel dengan nilai teks?",
+        "PilihanA": "Pilihan A",
+        "PilihanB": "Pilihan B",
+        "PilihanC": "Pilihan C",
+        "PilihanD": "Pilihan D",
+        "JawabanSoal": "A"
+    },
+    {
+        "NomorSoal": 7,
+        "KalimatSoal": "Dibawah ini adalah cara yang tepat untuk deklarasi variabel bilangan dengan tipe integer di C++!",
+        "PilihanA": "Pilihan A",
+        "PilihanB": "Pilihan B",
+        "PilihanC": "Pilihan C",
+        "PilihanD": "Pilihan D",
+        "JawabanSoal": "A"
+    },
+    {
+        "NomorSoal": 8,
+        "KalimatSoal": "Tipe data yang digunakan untuk bilangan pecahan adalah?",
+        "PilihanA": "Pilihan A",
+        "PilihanB": "Pilihan B",
+        "PilihanC": "Pilihan C",
+        "PilihanD": "Pilihan D",
+        "JawabanSoal": "A"
+    },
+    {
+        "NomorSoal": 9,
+        "KalimatSoal": "Suatu tempat yang berfungsi untuk menampung data atau nilai yang dapat berubah-ubah selama program berjalan tersebut",
+        "PilihanA": "Pilihan A",
+        "PilihanB": "Pilihan B",
+        "PilihanC": "Pilihan C",
+        "PilihanD": "Pilihan D",
+        "JawabanSoal": "A"
+    },
+    {
+        "NomorSoal": 10,
+        "KalimatSoal": "Suatu tempat yang berfungsi untuk menampung data atau nilai yang dapat berubah-ubah selama program berjalan tersebut",
+        "PilihanA": "Pilihan A",
+        "PilihanB": "Pilihan B",
+        "PilihanC": "Pilihan C",
+        "PilihanD": "Pilihan D",
+        "JawabanSoal": "A"
+    },
+    {
+        "NomorSoal": 11,
+        "KalimatSoal": "Suatu tempat yang berfungsi untuk menampung data atau nilai yang dapat berubah-ubah selama program berjalan tersebut",
+        "PilihanA": "Pilihan A",
+        "PilihanB": "Pilihan B",
+        "PilihanC": "Pilihan C",
+        "PilihanD": "Pilihan D",
+        "JawabanSoal": "A"
+    }
+]
