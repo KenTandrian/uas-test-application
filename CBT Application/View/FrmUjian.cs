@@ -9,15 +9,16 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using Newtonsoft.Json;
+using CBT_Application.Entity;
 
 namespace CBT_Application
 {
-    public partial class Form1 : Form
+    public partial class FrmUjian : Form
     {
         List<Soal> listDataSoal = null;
         string filename = @"..\..\..\data\dataSoal.json";
         
-        public Form1()
+        public FrmUjian()
         {
             InitializeComponent();
         }

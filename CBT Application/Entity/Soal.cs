@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CBT_Application
+namespace CBT_Application.Entity
 {
     public class Soal
     {
