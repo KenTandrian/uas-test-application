@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CBT_Application.Entity
 {
-    internal class User
+    public class User
     {
         public string Nama { get; set; }
         public string NoHP { get; set; }

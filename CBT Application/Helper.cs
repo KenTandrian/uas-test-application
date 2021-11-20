@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Drawing;
 using System.Text;
 using System.Security.Cryptography;
+using System.Windows.Forms;
 using System.Threading.Tasks;
 
 namespace CBT_Application
@@ -26,6 +28,18 @@ namespace CBT_Application
                 throw;
             }
             return result;
+        }
+
+        public static void MakeHighlight(object sender)
+        {
+            var cont = sender as TextBox;
+            cont.BackColor = Color.FromKnownColor(KnownColor.Gainsboro);
+        }
+
+        public static void RemoveHighlight(object sender)
+        {
+            var cont = sender as TextBox;
+            cont.BackColor = Color.FromKnownColor(KnownColor.Window);
         }
     }
 }

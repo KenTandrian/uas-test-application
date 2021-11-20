@@ -44,10 +44,12 @@ namespace CBT_Application
                         //txtIDUser.Focus();
 
                         // Buka Form Ujian
-                        FrmUjian form = new FrmUjian();
-                        this.Hide();
-                        form.Closed += (s, args) => this.Close();
-                        form.ShowDialog();
+                        using (FrmUjian form = new FrmUjian(uid))
+                        {
+                            this.Hide();
+                            form.Closed += (s, args) => this.Close();
+                            form.ShowDialog();
+                        }
                     } 
                     else
                     {
@@ -76,7 +78,7 @@ namespace CBT_Application
         private void txtIDUser_Enter(object sender, EventArgs e)
         {
             var cont = sender as TextBox;
-            cont.BackColor = Color.FromKnownColor(KnownColor.LightGray);
+            cont.BackColor = Color.FromKnownColor(KnownColor.Gainsboro);
         }
 
         private void txtIDUser_Leave(object sender, EventArgs e)
@@ -88,7 +90,7 @@ namespace CBT_Application
         private void txtPass_Enter(object sender, EventArgs e)
         {
             var cont = sender as TextBox;
-            cont.BackColor = Color.FromKnownColor(KnownColor.LightGray);
+            cont.BackColor = Color.FromKnownColor(KnownColor.Gainsboro);
         }
 
         private void txtPass_Leave(object sender, EventArgs e)
@@ -105,6 +107,15 @@ namespace CBT_Application
         private void txtPass_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter) btnLogIn_Click(null, null);
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            // Buka Form Create New User
+            View.FrmCreateNewUser form = new View.FrmCreateNewUser();
+            this.Hide();
+            form.Closed += (s, args) => this.Close();
+            form.ShowDialog();
         }
     }
 }

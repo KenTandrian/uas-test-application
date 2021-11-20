@@ -52,6 +52,19 @@ namespace CBT_Application.DAL
             return result;
         }
 
+        public User GetItemNamaTopik(string IDUser)
+        {
+            User result = default;
+            try
+            {
+                result = conn.QueryFirstOrDefault<User>("Select IDUser, Nama, Topik From T_User Where IDUser = @IDUser", new { IDUser });
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            return result;
+        }
 
         public bool TryLogIn(string userId, string pwd)
         {

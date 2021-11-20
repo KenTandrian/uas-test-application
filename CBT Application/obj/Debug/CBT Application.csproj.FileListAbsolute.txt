@@ -16,3 +16,5 @@ C:\Users\User\Source\Repos\KenTandrian\uas-test-application\CBT Application\obj\
 C:\Users\User\Source\Repos\KenTandrian\uas-test-application\CBT Application\obj\Debug\CBT_Application.View.FrmCreateNewUser.resources
 C:\Users\User\Source\Repos\KenTandrian\uas-test-application\CBT Application\bin\Debug\Dapper.dll
 C:\Users\User\Source\Repos\KenTandrian\uas-test-application\CBT Application\bin\Debug\Dapper.xml
+C:\Users\User\Source\Repos\KenTandrian\uas-test-application\CBT Application\obj\Debug\CBT_Application.View.FrmInfoUjian.resources
+C:\Users\User\Source\Repos\KenTandrian\uas-test-application\CBT Application\obj\Debug\CBT_Application.View.FrmHasilUjian.resources

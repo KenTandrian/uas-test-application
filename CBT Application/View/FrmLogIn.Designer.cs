@@ -36,9 +36,11 @@
             this.btnExit = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -66,10 +68,10 @@
             // txtIDUser
             // 
             this.txtIDUser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtIDUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIDUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIDUser.Location = new System.Drawing.Point(534, 231);
             this.txtIDUser.Name = "txtIDUser";
-            this.txtIDUser.Size = new System.Drawing.Size(235, 28);
+            this.txtIDUser.Size = new System.Drawing.Size(235, 26);
             this.txtIDUser.TabIndex = 0;
             this.txtIDUser.Enter += new System.EventHandler(this.txtIDUser_Enter);
             this.txtIDUser.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtIDUser_KeyDown);
@@ -78,10 +80,11 @@
             // txtPass
             // 
             this.txtPass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPass.Location = new System.Drawing.Point(534, 265);
             this.txtPass.Name = "txtPass";
-            this.txtPass.Size = new System.Drawing.Size(235, 28);
+            this.txtPass.PasswordChar = '●';
+            this.txtPass.Size = new System.Drawing.Size(235, 26);
             this.txtPass.TabIndex = 1;
             this.txtPass.Enter += new System.EventHandler(this.txtPass_Enter);
             this.txtPass.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPass_KeyDown);
@@ -100,19 +103,20 @@
             // 
             // btnExit
             // 
+            this.btnExit.BackColor = System.Drawing.Color.White;
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.Location = new System.Drawing.Point(605, 327);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(137, 43);
             this.btnExit.TabIndex = 3;
             this.btnExit.Text = "Exit";
-            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::CBT_Application.Properties.Resources.login_png;
-            this.pictureBox1.Location = new System.Drawing.Point(66, 162);
+            this.pictureBox1.Location = new System.Drawing.Point(94, 164);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Padding = new System.Windows.Forms.Padding(8);
             this.pictureBox1.Size = new System.Drawing.Size(244, 224);
@@ -130,17 +134,6 @@
             this.panel1.Size = new System.Drawing.Size(877, 116);
             this.panel1.TabIndex = 4;
             // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("Montserrat", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(3, 11);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(871, 49);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Welcome to";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Montserrat", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -152,6 +145,17 @@
             this.label3.Text = "COMPUTER-BASED TEST APPLICATION";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Montserrat", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(3, 11);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(871, 49);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Welcome to";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -162,13 +166,35 @@
             this.label4.TabIndex = 1;
             this.label4.Text = "Please Log In to continue.";
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(755, 410);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(94, 16);
+            this.linkLabel1.TabIndex = 5;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Add New User";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(582, 410);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(160, 16);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "You are an Administrator?";
+            // 
             // FrmLogIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(875, 450);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(877, 445);
             this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.linkLabel1);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnLogIn);
             this.Controls.Add(this.txtPass);
             this.Controls.Add(this.txtIDUser);
@@ -176,6 +202,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lblIDUser);
             this.Controls.Add(this.pictureBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmLogIn";
@@ -201,5 +228,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.Label label5;
     }
 }

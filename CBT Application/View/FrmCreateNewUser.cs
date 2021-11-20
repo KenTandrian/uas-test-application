@@ -21,7 +21,11 @@ namespace CBT_Application.View
 
         private void btnBatal_Click(object sender, EventArgs e)
         {
-            this.Close();
+            // Buka Form Login Kembali
+            FrmLogIn form = new FrmLogIn();
+            this.Hide();
+            form.Closed += (s, args) => this.Close();
+            form.ShowDialog();
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -96,6 +100,48 @@ namespace CBT_Application.View
         {
             cboTopik.SelectedIndex = 0;
             dtmTanggal.Value = DateTime.Today;
+        }
+
+        private void txtNama_Enter(object sender, EventArgs e) { Helper.MakeHighlight(sender); }
+        private void txtNama_Leave(object sender, EventArgs e) { Helper.RemoveHighlight(sender); }
+        private void txtNoHP_Enter(object sender, EventArgs e) { Helper.MakeHighlight(sender); }
+        private void txtNoHP_Leave(object sender, EventArgs e) { Helper.RemoveHighlight(sender); }
+        private void txtEmail_Enter(object sender, EventArgs e) { Helper.MakeHighlight(sender); }
+        private void txtEmail_Leave(object sender, EventArgs e) { Helper.RemoveHighlight(sender); }
+
+        private void txtNama_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter) SendKeys.Send("{tab}");
+        }
+
+        private void txtNoHP_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter) SendKeys.Send("{tab}");
+        }
+
+        private void txtEmail_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter) SendKeys.Send("{tab}");
+        }
+
+        private void dtmTanggal_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter) SendKeys.Send("{tab}");
+        }
+
+        private void cboTopik_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter) SendKeys.Send("{tab}");
+        }
+
+        private void txtIDUser_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter) SendKeys.Send("{tab}");
+        }
+
+        private void txtPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter) btnSave_Click(null, null);
         }
     }
 }

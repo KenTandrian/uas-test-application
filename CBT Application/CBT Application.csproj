@@ -56,6 +56,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAL\Connection.cs" />
+    <Compile Include="DAL\DALSoal.cs" />
     <Compile Include="DAL\DALUser.cs" />
     <Compile Include="Entity\User.cs" />
     <Compile Include="Helper.cs" />
@@ -64,6 +65,18 @@
     </Compile>
     <Compile Include="View\FrmCreateNewUser.Designer.cs">
       <DependentUpon>FrmCreateNewUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmHasilUjian.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmHasilUjian.Designer.cs">
+      <DependentUpon>FrmHasilUjian.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmInfoUjian.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmInfoUjian.Designer.cs">
+      <DependentUpon>FrmInfoUjian.cs</DependentUpon>
     </Compile>
     <Compile Include="View\FrmUjian.cs">
       <SubType>Form</SubType>
@@ -82,6 +95,12 @@
     <Compile Include="Entity\Soal.cs" />
     <EmbeddedResource Include="View\FrmCreateNewUser.resx">
       <DependentUpon>FrmCreateNewUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmHasilUjian.resx">
+      <DependentUpon>FrmHasilUjian.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmInfoUjian.resx">
+      <DependentUpon>FrmInfoUjian.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FrmUjian.resx">
       <DependentUpon>FrmUjian.cs</DependentUpon>
@@ -118,6 +137,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\login-png.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exam.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
