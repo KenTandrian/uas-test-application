@@ -14,11 +14,11 @@ namespace CBT_Application.View
 {
     public partial class FrmInfoUjian : Form
     {
-        String mrd = "";
-        public FrmInfoUjian(String uid)
+        User pengguna = new User();
+        public FrmInfoUjian(User user)
         {
             InitializeComponent();
-            mrd = uid;
+            pengguna = user;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -26,13 +26,8 @@ namespace CBT_Application.View
             Close();
         }
 
-        User pengguna = new User();
         private void FrmInfoUjian_Load(object sender, EventArgs e)
         {
-            using (var dal = new DALUser())
-            {
-                pengguna = dal.GetItemNamaTopik(mrd);
-            }
             lblMapel.Text = pengguna.Topik.Trim();
             lblNamaSiswa.Text = pengguna.Nama.Trim();
         }

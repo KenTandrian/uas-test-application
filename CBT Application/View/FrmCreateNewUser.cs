@@ -17,15 +17,14 @@ namespace CBT_Application.View
         public FrmCreateNewUser()
         {
             InitializeComponent();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
         }
 
-        private void btnBatal_Click(object sender, EventArgs e)
+        public bool Run(FrmCreateNewUser form)
         {
-            // Buka Form Login Kembali
-            FrmLogIn form = new FrmLogIn();
-            this.Hide();
-            form.Closed += (s, args) => this.Close();
             form.ShowDialog();
+            return true;
         }
 
         private void btnSave_Click(object sender, EventArgs e)

@@ -43,12 +43,30 @@ namespace CBT_Application
                         txtPass.Clear();
                         //txtIDUser.Focus();
 
-                        // Buka Form Ujian
-                        using (FrmUjian form = new FrmUjian(uid))
+                        if (item.Administrator == true)
                         {
+                            // Buka Form Admin Panel
+                            View.FrmAdminPanel form = new View.FrmAdminPanel();
                             this.Hide();
-                            form.Closed += (s, args) => this.Close();
-                            form.ShowDialog();
+                            bool jalan = form.Run(form);
+                            if (jalan)
+                            {
+                                this.Show();
+                                txtIDUser.Focus();
+                            }
+                        } 
+                        else
+                        {
+                            // Buka Form Ujian Sekaligus Set Attempt = 0
+                            User passingUser = dal.GetItemNamaTopik(uid);
+                            passingUser.Attempt = 0;
+                            using (FrmUjian form = new FrmUjian(passingUser))
+                            {
+
+                                this.Hide();
+                                form.Closed += (s, args) => this.Close();
+                                form.ShowDialog();
+                            }
                         }
                     } 
                     else

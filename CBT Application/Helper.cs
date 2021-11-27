@@ -41,5 +41,23 @@ namespace CBT_Application
             var cont = sender as TextBox;
             cont.BackColor = Color.FromKnownColor(KnownColor.Window);
         }
+
+        public static void SetBtnAnswered(Button btn)
+        {
+            btn.BackColor = Color.FromArgb(57, 139, 57); 
+            btn.ForeColor = Color.White;
+        }
+
+        public static void ResetBtnColor(Button btn)
+        {
+            btn.BackColor = Color.White;
+            btn.ForeColor = Color.FromKnownColor(KnownColor.ControlDarkDark);
+        }
+
+        public static void SetBtnCurrent(Button btn)
+        {
+            btn.BackColor = Color.FromArgb(1, 100, 190);
+            btn.ForeColor = Color.White;
+        }
     }
 }

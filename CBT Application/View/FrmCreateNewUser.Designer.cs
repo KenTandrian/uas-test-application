@@ -43,7 +43,6 @@
             this.txtIDUser = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.cboTopik = new System.Windows.Forms.ComboBox();
-            this.btnBatal = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
@@ -194,6 +193,7 @@
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.Location = new System.Drawing.Point(509, 158);
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '●';
             this.txtPassword.Size = new System.Drawing.Size(160, 24);
             this.txtPassword.TabIndex = 6;
             this.txtPassword.Enter += new System.EventHandler(this.txtEmail_Enter);
@@ -214,19 +214,9 @@
             this.cboTopik.TabIndex = 4;
             this.cboTopik.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cboTopik_KeyDown);
             // 
-            // btnBatal
-            // 
-            this.btnBatal.Location = new System.Drawing.Point(576, 300);
-            this.btnBatal.Name = "btnBatal";
-            this.btnBatal.Size = new System.Drawing.Size(93, 29);
-            this.btnBatal.TabIndex = 8;
-            this.btnBatal.Text = "Keluar";
-            this.btnBatal.UseVisualStyleBackColor = true;
-            this.btnBatal.Click += new System.EventHandler(this.btnBatal_Click);
-            // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(469, 300);
+            this.btnSave.Location = new System.Drawing.Point(576, 298);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(93, 29);
             this.btnSave.TabIndex = 7;
@@ -261,7 +251,6 @@
             this.ClientSize = new System.Drawing.Size(696, 350);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.btnBatal);
             this.Controls.Add(this.cboTopik);
             this.Controls.Add(this.dtmTanggal);
             this.Controls.Add(this.txtPassword);
@@ -307,7 +296,6 @@
         private System.Windows.Forms.TextBox txtIDUser;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.ComboBox cboTopik;
-        private System.Windows.Forms.Button btnBatal;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label9;

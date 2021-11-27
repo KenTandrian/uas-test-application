@@ -25,12 +25,21 @@ namespace CBT_Application.DAL
             }
         }
 
-        public Soal GetItem(int nomorSoal)
+        public Soal GetItem(int nomorSoal, string topik)
         {
             Soal result = default;
             try
             {
-                result = conn.QueryFirstOrDefault<Soal>("Select noSoal, kalimatSoal, pilihanA, pilihanB, pilihanC, pilihanD, jawabanSoal From T_BankSoalCPP Where noSoal = @nomorSoal", new { nomorSoal });
+                if (topik.Trim().Equals("C++"))
+                {
+                    result = conn.QueryFirstOrDefault<Soal>("Select noSoal, kalimatSoal, pilihanA, pilihanB, pilihanC, pilihanD, jawabanSoal From T_BankSoalCPP Where noSoal = @nomorSoal", new { nomorSoal });
+                } else if (topik.Trim().Equals("Java"))
+                {
+                    result = conn.QueryFirstOrDefault<Soal>("Select noSoal, kalimatSoal, pilihanA, pilihanB, pilihanC, pilihanD, jawabanSoal From T_BankSoalJava Where noSoal = @nomorSoal", new { nomorSoal });
+                } else if (topik.Trim().Equals("IPA"))
+                {
+                    result = conn.QueryFirstOrDefault<Soal>("Select noSoal, kalimatSoal, pilihanA, pilihanB, pilihanC, pilihanD, jawabanSoal From T_BankSoalIlmu Where noSoal = @nomorSoal", new { nomorSoal });
+                }
             }
             catch (Exception)
             {

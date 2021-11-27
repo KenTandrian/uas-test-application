@@ -39,7 +39,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -166,25 +165,14 @@
             this.label4.TabIndex = 1;
             this.label4.Text = "Please Log In to continue.";
             // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(755, 410);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(94, 16);
-            this.linkLabel1.TabIndex = 5;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Add New User";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(582, 410);
+            this.label5.Location = new System.Drawing.Point(427, 402);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(160, 16);
+            this.label5.Size = new System.Drawing.Size(342, 16);
             this.label5.TabIndex = 6;
-            this.label5.Text = "You are an Administrator?";
+            this.label5.Text = "Log in with Administrator account to access Admin Panel.";
             // 
             // FrmLogIn
             // 
@@ -193,7 +181,6 @@
             this.ClientSize = new System.Drawing.Size(877, 445);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnLogIn);
             this.Controls.Add(this.txtPass);
@@ -228,7 +215,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Label label5;
     }
 }

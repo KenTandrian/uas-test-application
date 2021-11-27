@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\CBT Application"
+    "\\CBT Application",
+    "\\CBT Application\\View"
   ],
-  "SelectedNode": "\\CBT Application.sln",
+  "SelectedNode": "\\CBT Application\\View\\FrmLogIn.cs",
   "PreviewInSolutionExplorer": false
 }

@@ -18,21 +18,17 @@ namespace CBT_Application
     {
         List<Soal> listDataSoal = new List<Soal>();
         //string filename = @"..\..\..\data\dataSoal.json";
-        string userID = "";
         User pengguna = new User();
 
         // Waktu Ujian
         int menit = 20;
         int detik = 0;
 
-        public FrmUjian(string uid)
+        public FrmUjian(User user)
         {
             InitializeComponent();
-            userID = uid;
-            using (var dal = new DALUser())
-            {
-                pengguna = dal.GetItemNamaTopik(uid);
-            }
+            pengguna = user;
+            lblSubject.Text = pengguna.Topik.ToString();
         }
 
         public List<int> hasilRandom = new List<int>();
@@ -43,7 +39,7 @@ namespace CBT_Application
         private void Form1_Load(object sender, EventArgs e)
         {
             // Menampilkan Info Dulu sebelum mulai
-            using (View.FrmInfoUjian form1 = new View.FrmInfoUjian(userID))
+            using (View.FrmInfoUjian form1 = new View.FrmInfoUjian(pengguna))
             {
                 form1.ShowDialog();
             }
@@ -86,7 +82,7 @@ namespace CBT_Application
             {
                 using (var dal = new DALSoal())
                 {
-                    var soal = dal.GetItem(hasilRandom[i]);
+                    var soal = dal.GetItem(hasilRandom[i], pengguna.Topik);
                     listDataSoal.Add(soal);
                 }
             }
@@ -95,74 +91,6 @@ namespace CBT_Application
             {
                 this.lblJlhSoal.Text = $"Jumlah Soal Tersedia {this.listDataSoal.Count}";
             }*/
-        }
-
-        private void loadSoal(int nomorSekarang, int hasilRandom)
-        {
-            this.lblNomor.Text = $"{nomorSekarang}/{hasilRandom}"; // Nanti Dihapus HasilRandom
-            this.lblKalimatSoal.Text = listDataSoal[nomorSekarang - 1].kalimatSoal;
-            this.lblPilihanA.Text = listDataSoal[nomorSekarang - 1].pilihanA;
-            this.lblPilihanB.Text = listDataSoal[nomorSekarang - 1].pilihanB;
-            this.lblPilihanC.Text = listDataSoal[nomorSekarang - 1].pilihanC;
-            this.lblPilihanD.Text = listDataSoal[nomorSekarang - 1].pilihanD;
-            if (nomorSekarang == 1)
-            {
-                btnPrevious.Enabled = false;
-                btnNext.Enabled = true;
-            }
-            else if (nomorSekarang == 10)
-            {
-                btnPrevious.Enabled = true;
-                btnNext.Enabled = false;
-            } else
-            {
-                btnPrevious.Enabled = true;
-                btnNext.Enabled = true;
-            }
-            for (int i=0; i<10; i++)
-            {
-                if (jawabanSiswa[i] != null)
-                {
-                    switch (i)
-                    {
-                        case 0: btn1.BackColor = Color.LightGreen; break;
-                        case 1: btn2.BackColor = Color.LightGreen; break;
-                        case 2: btn3.BackColor = Color.LightGreen; break;
-                        case 3: btn4.BackColor = Color.LightGreen; break;
-                        case 4: btn5.BackColor = Color.LightGreen; break;
-                        case 5: btn6.BackColor = Color.LightGreen; break;
-                        case 6: btn7.BackColor = Color.LightGreen; break;
-                        case 7: btn8.BackColor = Color.LightGreen; break;
-                        case 8: btn9.BackColor = Color.LightGreen; break;
-                        case 9: btn10.BackColor = Color.LightGreen; break;
-                    }
-                }
-            }
-            // Reset warna button jawaban
-            btnA.BackColor = Color.White;
-            btnB.BackColor = Color.White;
-            btnC.BackColor = Color.White;
-            btnD.BackColor = Color.White;
-
-            // Memberi warna hijau ke jawaban yang dipilih
-            if (jawabanSiswa[nomorSekarang-1] != null)
-            {
-                switch (jawabanSiswa[nomorSekarang - 1]){
-                    case "A": btnA.BackColor = Color.LightGreen; break;
-                    case "B": btnB.BackColor = Color.LightGreen; break;
-                    case "C": btnC.BackColor = Color.LightGreen; break;
-                    case "D": btnD.BackColor = Color.LightGreen; break;
-                }
-            }
-
-            // Mengecek apakah Tombol Finish sudah boleh diaktifkan
-            bool terisiSemua = true;
-            foreach (var item in jawabanSiswa)
-            {
-                if (item == null) { terisiSemua = false; }
-            }
-            if (terisiSemua) { this.btnFinish.Enabled = true; } 
-            else { this.btnFinish.Enabled = false; }
         }
 
         // Pergantian Soal untuk setiap tombol
@@ -237,6 +165,7 @@ namespace CBT_Application
         private void btnFinish_Click(object sender, EventArgs e)
         {
             if (timer1.Enabled == true) timer1.Stop();
+            pengguna.Attempt += 1;
             DialogResult result = MessageBox.Show($"Waktu masih tersisa {menit} menit {detik} detik. Yakin ingin selesai?", this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
@@ -249,16 +178,126 @@ namespace CBT_Application
                         nilaiUjian = nilaiUjian + 10;
                     }
                 }
-                using (View.FrmHasilUjian form2 = new View.FrmHasilUjian(nilaiUjian))
+                pengguna.Score = nilaiUjian;
+                // Simpan nilai ke database.
+                using(var dal = new DALTestLog())
+                {
+                    dal.CreateNewLog(pengguna, nilaiUjian);
+                }
+
+                using (View.FrmHasilUjian form2 = new View.FrmHasilUjian(nilaiUjian, pengguna))
                 {
                     form2.Closed += (s, args) => this.Close();
                     form2.ShowDialog();
                 }
-                // Nanti buatkan untuk simpan nilai ke database.
-
             } else
             {
                 if (menit != 0 && detik != 0) timer1.Start();
+            }
+        }
+
+        // Procedures
+        private void loadSoal(int nomorSekarang, int hasilRandom)
+        {
+            this.lblNomor.Text = $"{nomorSekarang}"; // Nanti Dihapus /{hasilRandom}
+            this.lblKalimatSoal.Text = $"{listDataSoal[nomorSekarang - 1].kalimatSoal.Replace("\\n", "\n").Replace("\\t", "\t")}";
+            this.lblPilihanA.Text = listDataSoal[nomorSekarang - 1].pilihanA;
+            this.lblPilihanB.Text = listDataSoal[nomorSekarang - 1].pilihanB;
+            this.lblPilihanC.Text = listDataSoal[nomorSekarang - 1].pilihanC;
+            this.lblPilihanD.Text = listDataSoal[nomorSekarang - 1].pilihanD;
+
+            // Aktif atau Nonaktifkan tombol Prev and Next
+            if (nomorSekarang == 1)
+            {
+                btnPrevious.Enabled = false;
+                btnNext.Enabled = true;
+            }
+            else if (nomorSekarang == 10)
+            {
+                btnPrevious.Enabled = true;
+                btnNext.Enabled = false;
+            }
+            else
+            {
+                btnPrevious.Enabled = true;
+                btnNext.Enabled = true;
+            }
+            ChangeBtnSoalColor();
+
+            // Reset warna button jawaban
+            Helper.ResetBtnColor(btnA);
+            Helper.ResetBtnColor(btnB);
+            Helper.ResetBtnColor(btnC);
+            Helper.ResetBtnColor(btnD);
+
+            // Memberi warna hijau ke jawaban yang dipilih
+            if (jawabanSiswa[nomorSekarang - 1] != null)
+            {
+                switch (jawabanSiswa[nomorSekarang - 1])
+                {
+                    case "A": Helper.SetBtnAnswered(btnA); break;
+                    case "B": Helper.SetBtnAnswered(btnB); break;
+                    case "C": Helper.SetBtnAnswered(btnC); break;
+                    case "D": Helper.SetBtnAnswered(btnD); break;
+                }
+            }
+
+            // Mengecek apakah Tombol Finish sudah boleh diaktifkan
+            bool terisiSemua = true;
+            foreach (var item in jawabanSiswa)
+            {
+                if (item == null) { terisiSemua = false; }
+            }
+            if (terisiSemua) 
+            { 
+                this.btnFinish.Enabled = true;
+            }
+            else { this.btnFinish.Enabled = false; }
+        }
+        private void ChangeBtnSoalColor()
+        {
+            Helper.ResetBtnColor(btn1);
+            Helper.ResetBtnColor(btn2);
+            Helper.ResetBtnColor(btn3);
+            Helper.ResetBtnColor(btn4);
+            Helper.ResetBtnColor(btn5);
+            Helper.ResetBtnColor(btn6);
+            Helper.ResetBtnColor(btn7);
+            Helper.ResetBtnColor(btn8);
+            Helper.ResetBtnColor(btn9);
+            Helper.ResetBtnColor(btn10);
+
+            for (int i = 0; i < 10; i++)
+            {
+                if (jawabanSiswa[i] != null)
+                {
+                    switch (i)
+                    {
+                        case 0: Helper.SetBtnAnswered(btn1); break;
+                        case 1: Helper.SetBtnAnswered(btn2); break;
+                        case 2: Helper.SetBtnAnswered(btn3); break;
+                        case 3: Helper.SetBtnAnswered(btn4); break;
+                        case 4: Helper.SetBtnAnswered(btn5); break;
+                        case 5: Helper.SetBtnAnswered(btn6); break;
+                        case 6: Helper.SetBtnAnswered(btn7); break;
+                        case 7: Helper.SetBtnAnswered(btn8); break;
+                        case 8: Helper.SetBtnAnswered(btn9); break;
+                        case 9: Helper.SetBtnAnswered(btn10); break;
+                    }
+                }
+            }
+            switch (nomorSekarang - 1)
+            {
+                case 0: Helper.SetBtnCurrent(btn1); break;
+                case 1: Helper.SetBtnCurrent(btn2); break;
+                case 2: Helper.SetBtnCurrent(btn3); break;
+                case 3: Helper.SetBtnCurrent(btn4); break;
+                case 4: Helper.SetBtnCurrent(btn5); break;
+                case 5: Helper.SetBtnCurrent(btn6); break;
+                case 6: Helper.SetBtnCurrent(btn7); break;
+                case 7: Helper.SetBtnCurrent(btn8); break;
+                case 8: Helper.SetBtnCurrent(btn9); break;
+                case 9: Helper.SetBtnCurrent(btn10); break;
             }
         }
     }

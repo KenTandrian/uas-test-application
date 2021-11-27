@@ -15,5 +15,9 @@ namespace CBT_Application.Entity
         public string Topik { get; set; }
         public string IDUser { get; set; }
         public string PassUser { get; set; }
+        public int Score { get; set; }
+        public int Attempt { get; set; }
+
+        public bool Administrator { get; set; }
     }
 }
