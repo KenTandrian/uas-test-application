@@ -61,6 +61,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.pnlQuestion = new System.Windows.Forms.Panel();
+            this.prbProgress = new System.Windows.Forms.ProgressBar();
             this.btn10 = new CBT_Application.Controls.RoundedButton();
             this.btn9 = new CBT_Application.Controls.RoundedButton();
             this.btn5 = new CBT_Application.Controls.RoundedButton();
@@ -232,7 +233,7 @@
             this.lblKalimatSoal.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblKalimatSoal.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblKalimatSoal.Location = new System.Drawing.Point(26, 80);
+            this.lblKalimatSoal.Location = new System.Drawing.Point(26, 90);
             this.lblKalimatSoal.Name = "lblKalimatSoal";
             this.lblKalimatSoal.Size = new System.Drawing.Size(918, 134);
             this.lblKalimatSoal.TabIndex = 5;
@@ -244,7 +245,7 @@
             this.lblNomor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblNomor.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNomor.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblNomor.Location = new System.Drawing.Point(145, 24);
+            this.lblNomor.Location = new System.Drawing.Point(145, 34);
             this.lblNomor.Name = "lblNomor";
             this.lblNomor.Size = new System.Drawing.Size(53, 40);
             this.lblNomor.TabIndex = 4;
@@ -255,7 +256,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(26, 32);
+            this.label2.Location = new System.Drawing.Point(26, 42);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(124, 23);
             this.label2.TabIndex = 3;
@@ -459,6 +460,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlQuestion.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pnlQuestion.Controls.Add(this.prbProgress);
             this.pnlQuestion.Controls.Add(this.btnNext);
             this.pnlQuestion.Controls.Add(this.lblNomor);
             this.pnlQuestion.Controls.Add(this.btnFinish);
@@ -477,6 +479,16 @@
             this.pnlQuestion.Name = "pnlQuestion";
             this.pnlQuestion.Size = new System.Drawing.Size(951, 520);
             this.pnlQuestion.TabIndex = 7;
+            // 
+            // prbProgress
+            // 
+            this.prbProgress.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.prbProgress.Location = new System.Drawing.Point(0, 0);
+            this.prbProgress.Name = "prbProgress";
+            this.prbProgress.Size = new System.Drawing.Size(951, 10);
+            this.prbProgress.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
+            this.prbProgress.TabIndex = 17;
             // 
             // btn10
             // 
@@ -820,6 +832,7 @@
         private Controls.RoundedButton btn4;
         private Controls.RoundedButton btn3;
         private Controls.RoundedButton btn2;
+        private System.Windows.Forms.ProgressBar prbProgress;
     }
 }
 

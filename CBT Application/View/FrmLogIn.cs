@@ -127,13 +127,18 @@ namespace CBT_Application
             if (e.KeyCode == Keys.Enter) btnLogIn_Click(null, null);
         }
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void FrmLogIn_Load(object sender, EventArgs e)
         {
-            // Buka Form Create New User
-            View.FrmCreateNewUser form = new View.FrmCreateNewUser();
-            this.Hide();
-            form.Closed += (s, args) => this.Close();
-            form.ShowDialog();
+            this.Show();
+            if (ConnParameter.Database == default)
+            {
+                View.FrmConnection frm = new View.FrmConnection();
+                bool hasil = frm.Run(frm);
+                if (!hasil)
+                {
+                    this.Close();
+                }
+            }
         }
     }
 }

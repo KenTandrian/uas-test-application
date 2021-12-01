@@ -4,6 +4,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CBT_Application.Entity;
 
 namespace CBT_Application.DAL
 {
@@ -17,9 +18,9 @@ namespace CBT_Application.DAL
             {
                 connStringBuilder = new SqlConnectionStringBuilder
                 {
-                    DataSource = @"LAPTOP-JFB3URLN",
-                    InitialCatalog = "DB_CBTApp",
-                    IntegratedSecurity = true
+                    DataSource = ConnParameter.Server,
+                    InitialCatalog = ConnParameter.Database,
+                    IntegratedSecurity = ConnParameter.IntegratedSecurity
                 };
 
             }

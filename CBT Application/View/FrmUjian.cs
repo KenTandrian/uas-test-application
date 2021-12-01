@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
-using Newtonsoft.Json;
 using CBT_Application.Entity;
 using CBT_Application.DAL;
 
@@ -197,6 +196,7 @@ namespace CBT_Application
         }
 
         // Procedures
+        int jlhTerisiSblmnya = 0;
         private void loadSoal(int nomorSekarang, int hasilRandom)
         {
             this.lblNomor.Text = $"{nomorSekarang}"; // Nanti Dihapus /{hasilRandom}
@@ -244,12 +244,23 @@ namespace CBT_Application
 
             // Mengecek apakah Tombol Finish sudah boleh diaktifkan
             bool terisiSemua = true;
+            int jlhTerisi = 10;
             foreach (var item in jawabanSiswa)
             {
-                if (item == null) { terisiSemua = false; }
+                if (item == null) 
+                { 
+                    terisiSemua = false;
+                    jlhTerisi--;
+                }
             }
+            for (int i=jlhTerisiSblmnya*100; i < (jlhTerisi*100); i++)
+            {
+                prbProgress.Value = i/10;
+            }
+            jlhTerisiSblmnya = jlhTerisi;
             if (terisiSemua) 
-            { 
+            {
+                prbProgress.Value = 100;
                 this.btnFinish.Enabled = true;
             }
             else { this.btnFinish.Enabled = false; }

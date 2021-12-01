@@ -30,6 +30,7 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btnAddNewStudent = new CBT_Application.Controls.RoundedButton();
             this.lblIPA = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.lblJava = new System.Windows.Forms.Label();
@@ -60,13 +61,12 @@
             this.lblYMD = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.btnExport = new CBT_Application.Controls.RoundedButton();
+            this.btnFilter = new CBT_Application.Controls.RoundedButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnAddNewStudent = new CBT_Application.Controls.RoundedButton();
-            this.btnExport = new CBT_Application.Controls.RoundedButton();
-            this.btnFilter = new CBT_Application.Controls.RoundedButton();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListStudent)).BeginInit();
@@ -108,8 +108,30 @@
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(987, 414);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "   Students   ";
+            this.tabPage1.Text = "      Students      ";
+            this.tabPage1.ToolTipText = "Students";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // btnAddNewStudent
+            // 
+            this.btnAddNewStudent.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAddNewStudent.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnAddNewStudent.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnAddNewStudent.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnAddNewStudent.BorderRadius = 7;
+            this.btnAddNewStudent.BorderSize = 0;
+            this.btnAddNewStudent.FlatAppearance.BorderSize = 0;
+            this.btnAddNewStudent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddNewStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddNewStudent.ForeColor = System.Drawing.Color.White;
+            this.btnAddNewStudent.Location = new System.Drawing.Point(786, 354);
+            this.btnAddNewStudent.Name = "btnAddNewStudent";
+            this.btnAddNewStudent.Size = new System.Drawing.Size(172, 40);
+            this.btnAddNewStudent.TabIndex = 1;
+            this.btnAddNewStudent.Text = "Add New Student";
+            this.btnAddNewStudent.TextColor = System.Drawing.Color.White;
+            this.btnAddNewStudent.UseVisualStyleBackColor = false;
+            this.btnAddNewStudent.Click += new System.EventHandler(this.btnAddNewStudent_Click);
             // 
             // lblIPA
             // 
@@ -304,7 +326,7 @@
             // Topik
             // 
             this.Topik.HeaderText = "Subject";
-            this.Topik.MinimumWidth = 40;
+            this.Topik.MinimumWidth = 30;
             this.Topik.Name = "Topik";
             this.Topik.Width = 125;
             // 
@@ -324,15 +346,16 @@
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(987, 414);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "   Reports   ";
+            this.tabPage2.Text = "      Reports      ";
+            this.tabPage2.ToolTipText = "Results";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // cboYMD
             // 
             this.cboYMD.FormattingEnabled = true;
-            this.cboYMD.Location = new System.Drawing.Point(793, 188);
+            this.cboYMD.Location = new System.Drawing.Point(780, 188);
             this.cboYMD.Name = "cboYMD";
-            this.cboYMD.Size = new System.Drawing.Size(172, 24);
+            this.cboYMD.Size = new System.Drawing.Size(185, 24);
             this.cboYMD.TabIndex = 5;
             // 
             // cboBasedOn
@@ -343,9 +366,9 @@
             "Month",
             "Date",
             "Year"});
-            this.cboBasedOn.Location = new System.Drawing.Point(793, 120);
+            this.cboBasedOn.Location = new System.Drawing.Point(780, 120);
             this.cboBasedOn.Name = "cboBasedOn";
-            this.cboBasedOn.Size = new System.Drawing.Size(172, 24);
+            this.cboBasedOn.Size = new System.Drawing.Size(185, 24);
             this.cboBasedOn.TabIndex = 5;
             this.cboBasedOn.SelectedIndexChanged += new System.EventHandler(this.cboBasedOn_SelectedIndexChanged);
             // 
@@ -355,7 +378,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.label10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label10.Location = new System.Drawing.Point(18, 25);
+            this.label10.Location = new System.Drawing.Point(18, 14);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(205, 24);
             this.label10.TabIndex = 4;
@@ -371,11 +394,11 @@
             this.Topik1,
             this.Nilai,
             this.Status});
-            this.dgvExamResult.Location = new System.Drawing.Point(22, 64);
+            this.dgvExamResult.Location = new System.Drawing.Point(22, 50);
             this.dgvExamResult.Name = "dgvExamResult";
             this.dgvExamResult.RowHeadersWidth = 51;
             this.dgvExamResult.RowTemplate.Height = 24;
-            this.dgvExamResult.Size = new System.Drawing.Size(743, 331);
+            this.dgvExamResult.Size = new System.Drawing.Size(737, 345);
             this.dgvExamResult.TabIndex = 3;
             // 
             // WktuUjian
@@ -417,7 +440,7 @@
             // 
             this.lblYMD.AutoSize = true;
             this.lblYMD.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblYMD.Location = new System.Drawing.Point(793, 166);
+            this.lblYMD.Location = new System.Drawing.Point(776, 166);
             this.lblYMD.Name = "lblYMD";
             this.lblYMD.Size = new System.Drawing.Size(133, 17);
             this.lblYMD.TabIndex = 0;
@@ -427,7 +450,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(793, 98);
+            this.label11.Location = new System.Drawing.Point(776, 98);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(70, 17);
             this.label11.TabIndex = 0;
@@ -437,11 +460,53 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(793, 64);
+            this.label9.Location = new System.Drawing.Point(776, 64);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(116, 19);
             this.label9.TabIndex = 0;
             this.label9.Text = "Filter Options";
+            // 
+            // btnExport
+            // 
+            this.btnExport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExport.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnExport.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnExport.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnExport.BorderRadius = 10;
+            this.btnExport.BorderSize = 0;
+            this.btnExport.FlatAppearance.BorderSize = 0;
+            this.btnExport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExport.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExport.ForeColor = System.Drawing.Color.White;
+            this.btnExport.Location = new System.Drawing.Point(780, 355);
+            this.btnExport.Name = "btnExport";
+            this.btnExport.Size = new System.Drawing.Size(185, 40);
+            this.btnExport.TabIndex = 2;
+            this.btnExport.Text = "Export Report (PDF)";
+            this.btnExport.TextColor = System.Drawing.Color.White;
+            this.btnExport.UseVisualStyleBackColor = false;
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
+            // 
+            // btnFilter
+            // 
+            this.btnFilter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnFilter.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnFilter.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnFilter.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnFilter.BorderRadius = 10;
+            this.btnFilter.BorderSize = 0;
+            this.btnFilter.FlatAppearance.BorderSize = 0;
+            this.btnFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFilter.ForeColor = System.Drawing.Color.White;
+            this.btnFilter.Location = new System.Drawing.Point(780, 305);
+            this.btnFilter.Name = "btnFilter";
+            this.btnFilter.Size = new System.Drawing.Size(185, 40);
+            this.btnFilter.TabIndex = 2;
+            this.btnFilter.Text = "Filter Now!";
+            this.btnFilter.TextColor = System.Drawing.Color.White;
+            this.btnFilter.UseVisualStyleBackColor = false;
+            this.btnFilter.Click += new System.EventHandler(this.btnFilter_Click);
             // 
             // panel1
             // 
@@ -491,69 +556,6 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Administrator";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // btnAddNewStudent
-            // 
-            this.btnAddNewStudent.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAddNewStudent.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnAddNewStudent.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnAddNewStudent.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnAddNewStudent.BorderRadius = 7;
-            this.btnAddNewStudent.BorderSize = 0;
-            this.btnAddNewStudent.FlatAppearance.BorderSize = 0;
-            this.btnAddNewStudent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddNewStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddNewStudent.ForeColor = System.Drawing.Color.White;
-            this.btnAddNewStudent.Location = new System.Drawing.Point(786, 354);
-            this.btnAddNewStudent.Name = "btnAddNewStudent";
-            this.btnAddNewStudent.Size = new System.Drawing.Size(172, 40);
-            this.btnAddNewStudent.TabIndex = 1;
-            this.btnAddNewStudent.Text = "Add New Student";
-            this.btnAddNewStudent.TextColor = System.Drawing.Color.White;
-            this.btnAddNewStudent.UseVisualStyleBackColor = false;
-            this.btnAddNewStudent.Click += new System.EventHandler(this.btnAddNewStudent_Click);
-            // 
-            // btnExport
-            // 
-            this.btnExport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnExport.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnExport.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnExport.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnExport.BorderRadius = 7;
-            this.btnExport.BorderSize = 0;
-            this.btnExport.FlatAppearance.BorderSize = 0;
-            this.btnExport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExport.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExport.ForeColor = System.Drawing.Color.White;
-            this.btnExport.Location = new System.Drawing.Point(793, 355);
-            this.btnExport.Name = "btnExport";
-            this.btnExport.Size = new System.Drawing.Size(172, 40);
-            this.btnExport.TabIndex = 2;
-            this.btnExport.Text = "Export as PDF";
-            this.btnExport.TextColor = System.Drawing.Color.White;
-            this.btnExport.UseVisualStyleBackColor = false;
-            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
-            // 
-            // btnFilter
-            // 
-            this.btnFilter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnFilter.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnFilter.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnFilter.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnFilter.BorderRadius = 7;
-            this.btnFilter.BorderSize = 0;
-            this.btnFilter.FlatAppearance.BorderSize = 0;
-            this.btnFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFilter.ForeColor = System.Drawing.Color.White;
-            this.btnFilter.Location = new System.Drawing.Point(793, 305);
-            this.btnFilter.Name = "btnFilter";
-            this.btnFilter.Size = new System.Drawing.Size(172, 40);
-            this.btnFilter.TabIndex = 2;
-            this.btnFilter.Text = "Filter Now!";
-            this.btnFilter.TextColor = System.Drawing.Color.White;
-            this.btnFilter.UseVisualStyleBackColor = false;
-            this.btnFilter.Click += new System.EventHandler(this.btnFilter_Click);
             // 
             // FrmAdminPanel
             // 
@@ -611,15 +613,15 @@
         private Controls.RoundedButton btnFilter;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nama;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NoHP;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TglDaftar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Topik;
         private System.Windows.Forms.DataGridViewTextBoxColumn WktuUjian;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nama1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Topik1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nilai;
         private System.Windows.Forms.DataGridViewTextBoxColumn Status;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nama;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NoHP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TglDaftar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Topik;
     }
 }

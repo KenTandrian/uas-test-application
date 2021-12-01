@@ -38,8 +38,9 @@
             this.lblNama = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.lblSubject = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnRetake = new System.Windows.Forms.Button();
+            this.btnCertificate = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -62,7 +63,7 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(-1, -2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(803, 49);
+            this.panel1.Size = new System.Drawing.Size(900, 49);
             this.panel1.TabIndex = 1;
             // 
             // label2
@@ -71,7 +72,7 @@
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label2.Location = new System.Drawing.Point(3, 11);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(797, 28);
+            this.label2.Size = new System.Drawing.Size(897, 28);
             this.label2.TabIndex = 1;
             this.label2.Text = "COMPUTER-BASED TEST APPLICATION";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -90,7 +91,7 @@
             // btnBackLogin
             // 
             this.btnBackLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBackLogin.Location = new System.Drawing.Point(536, 347);
+            this.btnBackLogin.Location = new System.Drawing.Point(720, 347);
             this.btnBackLogin.Name = "btnBackLogin";
             this.btnBackLogin.Size = new System.Drawing.Size(146, 45);
             this.btnBackLogin.TabIndex = 2;
@@ -104,7 +105,7 @@
             this.lblLulus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLulus.Location = new System.Drawing.Point(574, 289);
             this.lblLulus.Name = "lblLulus";
-            this.lblLulus.Size = new System.Drawing.Size(143, 31);
+            this.lblLulus.Size = new System.Drawing.Size(114, 25);
             this.lblLulus.TabIndex = 0;
             this.lblLulus.Text = "Pass / Fail";
             this.lblLulus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -135,7 +136,7 @@
             this.label5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(380, 190);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(101, 30);
+            this.label5.Size = new System.Drawing.Size(81, 24);
             this.label5.TabIndex = 0;
             this.label5.Text = "Subject";
             // 
@@ -149,16 +150,6 @@
             this.lblSubject.TabIndex = 0;
             this.lblSubject.Text = "{ Test Subject }";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::CBT_Application.Properties.Resources.exam_result;
-            this.pictureBox1.Location = new System.Drawing.Point(43, 96);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(298, 296);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
-            // 
             // btnRetake
             // 
             this.btnRetake.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -170,13 +161,35 @@
             this.btnRetake.UseVisualStyleBackColor = true;
             this.btnRetake.Click += new System.EventHandler(this.btnRetake_Click);
             // 
+            // btnCertificate
+            // 
+            this.btnCertificate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCertificate.Location = new System.Drawing.Point(536, 347);
+            this.btnCertificate.Name = "btnCertificate";
+            this.btnCertificate.Size = new System.Drawing.Size(161, 45);
+            this.btnCertificate.TabIndex = 2;
+            this.btnCertificate.Text = "Print Certificate";
+            this.btnCertificate.UseVisualStyleBackColor = true;
+            this.btnCertificate.Click += new System.EventHandler(this.btnCertificate_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::CBT_Application.Properties.Resources.exam_result;
+            this.pictureBox1.Location = new System.Drawing.Point(43, 96);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(298, 296);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            // 
             // FrmHasilUjian
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(897, 450);
             this.Controls.Add(this.lblLulus);
             this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.btnCertificate);
             this.Controls.Add(this.btnRetake);
             this.Controls.Add(this.btnBackLogin);
             this.Controls.Add(this.panel1);
@@ -210,5 +223,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lblSubject;
         private System.Windows.Forms.Button btnRetake;
+        private System.Windows.Forms.Button btnCertificate;
     }
 }

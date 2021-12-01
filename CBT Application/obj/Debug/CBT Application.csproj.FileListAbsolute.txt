@@ -8,8 +8,6 @@ C:\Users\User\Source\Repos\KenTandrian\uas-test-application\CBT Application\obj\
 C:\Users\User\Source\Repos\KenTandrian\uas-test-application\CBT Application\obj\Debug\CBT Application.csproj.CoreCompileInputs.cache
 C:\Users\User\Source\Repos\KenTandrian\uas-test-application\CBT Application\obj\Debug\CBT Application.exe
 C:\Users\User\Source\Repos\KenTandrian\uas-test-application\CBT Application\obj\Debug\CBT Application.pdb
-C:\Users\User\Source\Repos\KenTandrian\uas-test-application\CBT Application\bin\Debug\Newtonsoft.Json.dll
-C:\Users\User\Source\Repos\KenTandrian\uas-test-application\CBT Application\bin\Debug\Newtonsoft.Json.xml
 C:\Users\User\Source\Repos\KenTandrian\uas-test-application\CBT Application\obj\Debug\CBT Application.csproj.CopyComplete
 C:\Users\User\Source\Repos\KenTandrian\uas-test-application\CBT Application\obj\Debug\CBT_Application.FrmLogIn.resources
 C:\Users\User\Source\Repos\KenTandrian\uas-test-application\CBT Application\obj\Debug\CBT_Application.FrmUjian.resources
@@ -19,3 +17,4 @@ C:\Users\User\Source\Repos\KenTandrian\uas-test-application\CBT Application\bin\
 C:\Users\User\Source\Repos\KenTandrian\uas-test-application\CBT Application\obj\Debug\CBT_Application.View.FrmInfoUjian.resources
 C:\Users\User\Source\Repos\KenTandrian\uas-test-application\CBT Application\obj\Debug\CBT_Application.View.FrmHasilUjian.resources
 C:\Users\User\Source\Repos\KenTandrian\uas-test-application\CBT Application\obj\Debug\CBT_Application.View.FrmAdminPanel.resources
+C:\Users\User\Source\Repos\KenTandrian\uas-test-application\CBT Application\obj\Debug\CBT_Application.View.FrmConnection.resources
