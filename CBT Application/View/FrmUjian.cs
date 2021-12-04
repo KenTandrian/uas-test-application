@@ -50,30 +50,16 @@ namespace CBT_Application
             // Nonaktifkan tombol Finish
             this.btnFinish.Enabled = false;
 
-            // Ambil Soal dari File JSON
-            /*try
-            {
-                if (File.Exists(filename))
-                {
-                    string fileContent = File.ReadAllText(filename);
-                    listDataSoal = JsonConvert.DeserializeObject<List<Soal>>(fileContent);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }*/
-
             // Randomize nomor soal ke Sebuah List
-            Random rng = new Random();
+            Random rndm = new Random();
             for (int i = 0; i < 10; i++)
             {
-                int nomornya = rng.Next(1, 51);
+                int nmrRndm = rndm.Next(1, 51);
                 do
                 {
-                    nomornya = rng.Next(1, 51); // More than or equal to 1 and less than 51
-                } while (hasilRandom.Contains(nomornya)); // memastikan ga ada yang sama
-                hasilRandom.Add(nomornya);
+                    nmrRndm = rndm.Next(1, 51); // More than or equal to 1 and less than 51
+                } while (hasilRandom.Contains(nmrRndm)); // memastikan ga ada yang sama
+                hasilRandom.Add(nmrRndm);
             }
 
             // Ambil soal dari Database
@@ -86,10 +72,8 @@ namespace CBT_Application
                 }
             }
             loadSoal(nomorSekarang, hasilRandom[nomorSekarang-1]);
-            /*if (listDataSoal != null)
-            {
-                this.lblJlhSoal.Text = $"Jumlah Soal Tersedia {this.listDataSoal.Count}";
-            }*/
+            
+            lblConnected.Text = "Status: Connected";
         }
 
         // Pergantian Soal untuk setiap tombol

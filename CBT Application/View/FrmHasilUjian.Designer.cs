@@ -168,7 +168,7 @@
             this.btnCertificate.Name = "btnCertificate";
             this.btnCertificate.Size = new System.Drawing.Size(161, 45);
             this.btnCertificate.TabIndex = 2;
-            this.btnCertificate.Text = "Print Certificate";
+            this.btnCertificate.Text = "Save Certificate";
             this.btnCertificate.UseVisualStyleBackColor = true;
             this.btnCertificate.Click += new System.EventHandler(this.btnCertificate_Click);
             // 

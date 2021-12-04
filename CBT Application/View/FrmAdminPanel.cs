@@ -106,6 +106,7 @@ namespace CBT_Application.View
             {
                 a.Status = a.Nilai >= 65 ? "Pass" : "Fail";
             }
+
             foreach (UserExamResult a in listExamResult)
             {
                 string[] pchnTgl = new string[3];
@@ -115,6 +116,7 @@ namespace CBT_Application.View
                 if (!semuaTgl.Contains($"{pchnTgl[2]}-{pchnTgl[0]}-{pchnTgl[1]}")) semuaTgl.Add($"{pchnTgl[2]}-{pchnTgl[0]}-{pchnTgl[1]}");
                 a.TglUjian = $"{pchnTgl[2]}-{pchnTgl[0]}-{pchnTgl[1]} {a.TglUjian.Split(' ')[1]}";
             }
+
             if (listExamResult != null && listExamResult.Any())
             {
                 dgvExamResult.DataSource = listExamResult;
