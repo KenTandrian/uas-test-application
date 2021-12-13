@@ -43,12 +43,14 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(15, 40);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 17);
+            this.label1.Size = new System.Drawing.Size(47, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "Server";
             // 
             // txtServer
             // 
+            this.txtServer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtServer.Location = new System.Drawing.Point(18, 59);
             this.txtServer.Name = "txtServer";
             this.txtServer.Size = new System.Drawing.Size(314, 22);
@@ -60,12 +62,14 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(15, 100);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 17);
+            this.label2.Size = new System.Drawing.Size(67, 16);
             this.label2.TabIndex = 0;
             this.label2.Text = "Database";
             // 
             // txtDatabase
             // 
+            this.txtDatabase.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDatabase.Location = new System.Drawing.Point(18, 119);
             this.txtDatabase.Name = "txtDatabase";
             this.txtDatabase.Size = new System.Drawing.Size(314, 22);
@@ -80,13 +84,14 @@
             this.cboIntegrated.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cboIntegrated.Location = new System.Drawing.Point(18, 163);
             this.cboIntegrated.Name = "cboIntegrated";
-            this.cboIntegrated.Size = new System.Drawing.Size(180, 21);
+            this.cboIntegrated.Size = new System.Drawing.Size(170, 20);
             this.cboIntegrated.TabIndex = 3;
             this.cboIntegrated.Text = "Windows Authentication";
             this.cboIntegrated.UseVisualStyleBackColor = true;
             // 
             // btnOK
             // 
+            this.btnOK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnOK.Location = new System.Drawing.Point(194, 234);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(150, 31);
@@ -97,6 +102,9 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.txtServer);
             this.groupBox1.Controls.Add(this.cboIntegrated);
@@ -118,6 +126,7 @@
             this.Controls.Add(this.btnOK);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(390, 320);
             this.Name = "FrmConnection";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Connect to Database";

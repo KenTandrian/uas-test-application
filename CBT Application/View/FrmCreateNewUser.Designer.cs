@@ -178,6 +178,8 @@
             // 
             // txtIDUser
             // 
+            this.txtIDUser.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtIDUser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtIDUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIDUser.Location = new System.Drawing.Point(509, 126);
@@ -190,6 +192,8 @@
             // 
             // txtPassword
             // 
+            this.txtPassword.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.Location = new System.Drawing.Point(509, 158);
@@ -217,6 +221,7 @@
             // 
             // btnSave
             // 
+            this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSave.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.Location = new System.Drawing.Point(556, 305);
             this.btnSave.Name = "btnSave";
@@ -248,12 +253,13 @@
             // 
             // chkSendEmail
             // 
+            this.chkSendEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.chkSendEmail.AutoSize = true;
             this.chkSendEmail.Checked = true;
             this.chkSendEmail.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkSendEmail.Location = new System.Drawing.Point(24, 317);
             this.chkSendEmail.Name = "chkSendEmail";
-            this.chkSendEmail.Size = new System.Drawing.Size(251, 21);
+            this.chkSendEmail.Size = new System.Drawing.Size(236, 20);
             this.chkSendEmail.TabIndex = 10;
             this.chkSendEmail.Text = "Kirim Email Konfirmasi Pendaftaran";
             this.chkSendEmail.UseVisualStyleBackColor = true;
@@ -283,6 +289,7 @@
             this.Controls.Add(this.label1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(710, 410);
             this.Name = "FrmCreateNewUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tambah Peserta Baru";

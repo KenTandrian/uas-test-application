@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -59,19 +59,6 @@
             this.panel1.Size = new System.Drawing.Size(463, 70);
             this.panel1.TabIndex = 2;
             // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(13, 31);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(438, 28);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Please Input Your Email";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // label1
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -85,8 +72,23 @@
             this.label1.Text = "Send to Email";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Location = new System.Drawing.Point(13, 31);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(438, 28);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Please Input Your Email";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.txtSenderName);
@@ -120,6 +122,8 @@
             // 
             // txtSenderName
             // 
+            this.txtSenderName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSenderName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSenderName.Location = new System.Drawing.Point(156, 30);
             this.txtSenderName.Name = "txtSenderName";
@@ -131,6 +135,8 @@
             // 
             // txtSender
             // 
+            this.txtSender.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSender.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSender.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
             this.txtSender.Location = new System.Drawing.Point(156, 61);
@@ -143,6 +149,8 @@
             // 
             // txtSenderPass
             // 
+            this.txtSenderPass.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSenderPass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSenderPass.Location = new System.Drawing.Point(156, 93);
             this.txtSenderPass.Name = "txtSenderPass";
@@ -164,6 +172,7 @@
             // 
             // btnSendEmail
             // 
+            this.btnSendEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSendEmail.Location = new System.Drawing.Point(321, 309);
             this.btnSendEmail.Name = "btnSendEmail";
             this.btnSendEmail.Size = new System.Drawing.Size(114, 31);
@@ -174,6 +183,8 @@
             // 
             // txtReceiver
             // 
+            this.txtReceiver.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtReceiver.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtReceiver.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
             this.txtReceiver.Location = new System.Drawing.Point(166, 268);
@@ -186,6 +197,8 @@
             // 
             // txtReceiverName
             // 
+            this.txtReceiverName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtReceiverName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtReceiverName.Location = new System.Drawing.Point(166, 236);
             this.txtReceiverName.Name = "txtReceiverName";
@@ -227,6 +240,7 @@
             this.Controls.Add(this.panel1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(480, 405);
             this.Name = "FrmInputEmail";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Input Your Email";
