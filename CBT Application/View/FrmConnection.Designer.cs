@@ -53,7 +53,6 @@
             this.txtServer.Name = "txtServer";
             this.txtServer.Size = new System.Drawing.Size(314, 22);
             this.txtServer.TabIndex = 1;
-            this.txtServer.Text = "LAPTOP-JFB3URLN";
             this.txtServer.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtServer_KeyDown);
             // 
             // label2
