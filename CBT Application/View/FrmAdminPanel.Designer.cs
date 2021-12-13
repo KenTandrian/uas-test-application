@@ -30,6 +30,7 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btnAddNewStudent = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.lblIPA = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -72,7 +73,6 @@
             this.lblStatus = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
-            this.btnAddNewStudent = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListStudent)).BeginInit();
@@ -119,6 +119,19 @@
             this.tabPage1.Text = "      Students      ";
             this.tabPage1.ToolTipText = "Students";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // btnAddNewStudent
+            // 
+            this.btnAddNewStudent.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAddNewStudent.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddNewStudent.Location = new System.Drawing.Point(897, 363);
+            this.btnAddNewStudent.Name = "btnAddNewStudent";
+            this.btnAddNewStudent.Size = new System.Drawing.Size(172, 41);
+            this.btnAddNewStudent.TabIndex = 1;
+            this.btnAddNewStudent.Text = "Add New Student";
+            this.btnAddNewStudent.UseVisualStyleBackColor = true;
+            this.btnAddNewStudent.Click += new System.EventHandler(this.btnAddNewStudent_Click);
             // 
             // label13
             // 
@@ -599,17 +612,6 @@
             this.label12.TabIndex = 7;
             this.label12.Text = "Status:";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // btnAddNewStudent
-            // 
-            this.btnAddNewStudent.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddNewStudent.Location = new System.Drawing.Point(897, 363);
-            this.btnAddNewStudent.Name = "btnAddNewStudent";
-            this.btnAddNewStudent.Size = new System.Drawing.Size(172, 41);
-            this.btnAddNewStudent.TabIndex = 1;
-            this.btnAddNewStudent.Text = "Add New Student";
-            this.btnAddNewStudent.UseVisualStyleBackColor = true;
-            this.btnAddNewStudent.Click += new System.EventHandler(this.btnAddNewStudent_Click);
             // 
             // FrmAdminPanel
             // 

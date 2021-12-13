@@ -2,9 +2,7 @@ C:\Users\User\source\repos\KenTandrian\uas-test-application\CBT Application\bin\
 C:\Users\User\source\repos\KenTandrian\uas-test-application\CBT Application\bin\Release\CBT Application.exe
 C:\Users\User\source\repos\KenTandrian\uas-test-application\CBT Application\bin\Release\CBT Application.pdb
 C:\Users\User\source\repos\KenTandrian\uas-test-application\CBT Application\bin\Release\Dapper.dll
-C:\Users\User\source\repos\KenTandrian\uas-test-application\CBT Application\bin\Release\Newtonsoft.Json.dll
 C:\Users\User\source\repos\KenTandrian\uas-test-application\CBT Application\bin\Release\Dapper.xml
-C:\Users\User\source\repos\KenTandrian\uas-test-application\CBT Application\bin\Release\Newtonsoft.Json.xml
 C:\Users\User\source\repos\KenTandrian\uas-test-application\CBT Application\obj\Release\CBT Application.csproj.AssemblyReference.cache
 C:\Users\User\source\repos\KenTandrian\uas-test-application\CBT Application\obj\Release\CBT Application.csproj.SuggestedBindingRedirects.cache
 C:\Users\User\source\repos\KenTandrian\uas-test-application\CBT Application\obj\Release\CBT_Application.View.FrmAdminPanel.resources
@@ -19,3 +17,5 @@ C:\Users\User\source\repos\KenTandrian\uas-test-application\CBT Application\obj\
 C:\Users\User\source\repos\KenTandrian\uas-test-application\CBT Application\obj\Release\CBT Application.csproj.CopyComplete
 C:\Users\User\source\repos\KenTandrian\uas-test-application\CBT Application\obj\Release\CBT Application.exe
 C:\Users\User\source\repos\KenTandrian\uas-test-application\CBT Application\obj\Release\CBT Application.pdb
+C:\Users\User\Source\Repos\KenTandrian\uas-test-application\CBT Application\obj\Release\CBT_Application.View.FrmConnection.resources
+C:\Users\User\Source\Repos\KenTandrian\uas-test-application\CBT Application\obj\Release\CBT_Application.View.FrmInputEmail.resources

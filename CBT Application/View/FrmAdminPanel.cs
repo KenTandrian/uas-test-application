@@ -361,6 +361,7 @@ namespace CBT_Application.View
 
                         // Baris kedua
                         string teksFilter = cboYMD.Enabled ? $": {cboYMD.Text.Trim()}" : "";
+
                         sheet.Cells[barisHeader++, 1] = $"Filter by {cboBasedOn.Text.Trim()}{teksFilter}";
                         sheet.Range[$"A{barisHeader -1}"].Font.Size = 11;
                         sheet.Range[$"A{barisHeader -1}"].HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter;

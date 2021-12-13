@@ -18,3 +18,4 @@ C:\Users\User\Source\Repos\KenTandrian\uas-test-application\CBT Application\obj\
 C:\Users\User\Source\Repos\KenTandrian\uas-test-application\CBT Application\obj\Debug\CBT_Application.View.FrmAdminPanel.resources
 C:\Users\User\Source\Repos\KenTandrian\uas-test-application\CBT Application\obj\Debug\CBT_Application.View.FrmConnection.resources
 C:\Users\User\Source\Repos\KenTandrian\uas-test-application\CBT Application\obj\Debug\CBT_Application.View.FrmInputEmail.resources
+C:\Users\User\Source\Repos\KenTandrian\uas-test-application\CBT Application\obj\Debug\CBT Application.csproj.SuggestedBindingRedirects.cache
