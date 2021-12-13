@@ -38,13 +38,12 @@ namespace CBT_Application
                     {
                         // Login Berhasil
                         var item = dal.GetItem(uid);
-                        MessageBox.Show($"Login Succeed.\nWelcome, {item.Nama}!", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
                         txtIDUser.Clear();
                         txtPass.Clear();
-                        //txtIDUser.Focus();
 
                         if (item.Administrator == true)
                         {
+                            MessageBox.Show($"Login Succeed.\nWelcome, {item.Nama}!", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
                             // Buka Form Admin Panel
                             View.FrmAdminPanel form = new View.FrmAdminPanel();
                             this.Hide();
@@ -57,15 +56,25 @@ namespace CBT_Application
                         } 
                         else
                         {
-                            // Buka Form Ujian Sekaligus Set Attempt = 0
-                            User passingUser = dal.GetItemNamaTopik(uid);
-                            passingUser.Attempt = 0;
-                            using (FrmUjian form = new FrmUjian(passingUser))
+                            if (!item.ExamStatus)
                             {
+                                MessageBox.Show($"Login Succeed.\nWelcome, {item.Nama}!", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                // Buka Form Ujian Sekaligus Set Attempt = 0
+                                User passingUser = dal.GetItemNamaTopik(uid);
+                                passingUser.Attempt = 0;
+                                using (FrmUjian form = new FrmUjian(passingUser))
+                                {
 
-                                this.Hide();
-                                form.Closed += (s, args) => this.Close();
-                                form.ShowDialog();
+                                    this.Hide();
+                                    form.Closed += (s, args) => this.Close();
+                                    form.ShowDialog();
+                                }
+                            } else
+                            {
+                                MessageBox.Show("You have done your exam. Log in Failed.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                txtIDUser.Clear();
+                                txtPass.Clear();
+                                txtIDUser.Focus();
                             }
                         }
                     } 
@@ -93,30 +102,12 @@ namespace CBT_Application
         }
 
         // Pengaturan Warna TextBox
-        private void txtIDUser_Enter(object sender, EventArgs e)
-        {
-            var cont = sender as TextBox;
-            cont.BackColor = Color.FromKnownColor(KnownColor.Gainsboro);
-        }
+        private void txtIDUser_Enter(object sender, EventArgs e) { Helper.MakeHighlight(sender); }
+        private void txtPass_Enter(object sender, EventArgs e) { Helper.MakeHighlight(sender); }
+        private void txtIDUser_Leave(object sender, EventArgs e) { Helper.RemoveHighlight(sender); }
+        private void txtPass_Leave(object sender, EventArgs e) { Helper.RemoveHighlight(sender); }
 
-        private void txtIDUser_Leave(object sender, EventArgs e)
-        {
-            var cont = sender as TextBox;
-            cont.BackColor = Color.FromKnownColor(KnownColor.Window);
-        }
-
-        private void txtPass_Enter(object sender, EventArgs e)
-        {
-            var cont = sender as TextBox;
-            cont.BackColor = Color.FromKnownColor(KnownColor.Gainsboro);
-        }
-
-        private void txtPass_Leave(object sender, EventArgs e)
-        {
-            var cont = sender as TextBox;
-            cont.BackColor = Color.FromKnownColor(KnownColor.Window);
-        }
-
+        // Pengaturan Enter
         private void txtIDUser_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter) SendKeys.Send("{tab}");
@@ -127,6 +118,7 @@ namespace CBT_Application
             if (e.KeyCode == Keys.Enter) btnLogIn_Click(null, null);
         }
 
+        // Load FrmConnection dulu
         private void FrmLogIn_Load(object sender, EventArgs e)
         {
             this.Show();
@@ -138,6 +130,14 @@ namespace CBT_Application
                 {
                     this.Close();
                 }
+            }
+        }
+
+        private void FrmLogIn_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Are you sure you want to close?", "Confirm Exit", MessageBoxButtons.YesNo) == DialogResult.No)
+            {
+                e.Cancel = true;
             }
         }
     }

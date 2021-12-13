@@ -131,6 +131,7 @@ namespace CBT_Application
                     timer1.Stop();
                     MessageBox.Show("Waktu Ujian Sudah Habis!", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     // Form ini Close, nanti masuk ke Form Hasil Ujian
+                    SelesaikanUjian();
                 }
                 else
                 {
@@ -148,31 +149,10 @@ namespace CBT_Application
         private void btnFinish_Click(object sender, EventArgs e)
         {
             if (timer1.Enabled == true) timer1.Stop();
-            pengguna.Attempt += 1;
             DialogResult result = MessageBox.Show($"Waktu masih tersisa {menit} menit {detik} detik. Yakin ingin selesai?", this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
-                if (timer1.Enabled == true) timer1.Stop();
-                this.Hide();
-                for(int i = 0; i < 10; i++)
-                {
-                    if (jawabanSiswa[i].Trim().Equals(listDataSoal[i].jawabanSoal.Trim()))
-                    {
-                        nilaiUjian = nilaiUjian + 10;
-                    }
-                }
-                pengguna.Score = nilaiUjian;
-                // Simpan nilai ke database.
-                using(var dal = new DALTestLog())
-                {
-                    dal.CreateNewLog(pengguna, nilaiUjian);
-                }
-
-                using (View.FrmHasilUjian form2 = new View.FrmHasilUjian(nilaiUjian, pengguna))
-                {
-                    form2.Closed += (s, args) => this.Close();
-                    form2.ShowDialog();
-                }
+                SelesaikanUjian();
             } else
             {
                 if (menit != 0 && detik != 0) timer1.Start();
@@ -293,6 +273,35 @@ namespace CBT_Application
                 case 7: Helper.SetBtnCurrent(btn8); break;
                 case 8: Helper.SetBtnCurrent(btn9); break;
                 case 9: Helper.SetBtnCurrent(btn10); break;
+            }
+        }
+
+        private void SelesaikanUjian()
+        {
+            if (timer1.Enabled == true) timer1.Stop();
+            pengguna.Attempt += 1;
+            this.Hide();
+            for (int i = 0; i < jawabanSiswa.Length; i++)
+            {
+                if (jawabanSiswa[i] != null)
+                {
+                    if (jawabanSiswa[i].Trim().Equals(listDataSoal[i].jawabanSoal.Trim()))
+                    {
+                        nilaiUjian = nilaiUjian + 10;
+                    }
+                }
+            }
+            pengguna.Score = nilaiUjian;
+            // Simpan nilai ke database.
+            using (var dal = new DALTestLog())
+            {
+                dal.CreateNewLog(pengguna, nilaiUjian);
+            }
+
+            using (View.FrmHasilUjian form2 = new View.FrmHasilUjian(nilaiUjian, pengguna))
+            {
+                form2.Closed += (s, args) => this.Close();
+                form2.ShowDialog();
             }
         }
     }

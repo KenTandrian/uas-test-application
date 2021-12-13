@@ -17,6 +17,7 @@ namespace CBT_Application.View
         public FrmConnection()
         {
             InitializeComponent();
+            this.txtServer.Focus();
         }
 
         bool selesai = false;

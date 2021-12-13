@@ -43,7 +43,7 @@ namespace CBT_Application.DAL
             User result = default;
             try
             {
-                result = conn.QueryFirstOrDefault<User>("Select IDUser, Nama, Administrator From T_User Where IDUser = @IDUser", new { IDUser });
+                result = conn.QueryFirstOrDefault<User>("Select IDUser, Nama, Administrator, ExamStatus From T_User Where IDUser = @IDUser", new { IDUser });
             }
             catch (Exception)
             {
@@ -57,7 +57,7 @@ namespace CBT_Application.DAL
             User result = default;
             try
             {
-                result = conn.QueryFirstOrDefault<User>("Select IDUser, Nama, Topik From T_User Where IDUser = @IDUser", new { IDUser });
+                result = conn.QueryFirstOrDefault<User>("Select IDUser, Nama, Email, Topik From T_User Where IDUser = @IDUser", new { IDUser });
             }
             catch (Exception)
             {
@@ -71,7 +71,7 @@ namespace CBT_Application.DAL
             IEnumerable<User> result = default;
             try
             {
-                result = conn.Query<User>("Select Nama, NoHP, Email, TglDaftar, Topik From T_User where Administrator = 0 order by Nama");
+                result = conn.Query<User>("Select Nama, NoHP, Email, TglDaftar, Topik, ExamStatus From T_User where Administrator = 0 order by Nama");
             }
             catch (Exception)
             {
@@ -153,7 +153,7 @@ namespace CBT_Application.DAL
             bool result = false;
             try
             {
-                if (conn.Execute("Insert Into T_User Values (@Nama, @NoHP, @Email, @TglDaftar, @Topik, @IDUser, @PassUser, 0)", user) > 0)
+                if (conn.Execute("Insert Into T_User Values (@Nama, @NoHP, @Email, @TglDaftar, @Topik, @IDUser, @PassUser, 0, 0)", user) > 0)
                     return true;
             }
             catch (Exception)
@@ -163,6 +163,20 @@ namespace CBT_Application.DAL
             return result;
         }
 
+        public bool UpdateExamStatus(User user)
+        {
+            bool result = false;
+            try
+            {
+                if (conn.Execute("Update T_User set ExamStatus = 'true' where IDUser = @IDUser", user) > 0)
+                    return true;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            return result;
+        }
 
         public void Dispose()
         {

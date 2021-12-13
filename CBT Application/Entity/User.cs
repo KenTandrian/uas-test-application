@@ -17,7 +17,8 @@ namespace CBT_Application.Entity
         public string PassUser { get; set; }
         public int Score { get; set; }
         public int Attempt { get; set; }
-
         public bool Administrator { get; set; }
+        public bool ExamStatus { get; set; }
+        public string ExamStatusDesc { get; set; }
     }
 }

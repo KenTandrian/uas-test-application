@@ -47,7 +47,7 @@
             this.pictureBox1.Image = global::CBT_Application.Properties.Resources.exam;
             this.pictureBox1.Location = new System.Drawing.Point(141, 42);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(198, 170);
+            this.pictureBox1.Size = new System.Drawing.Size(300, 300);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -55,40 +55,40 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(391, 59);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(506, 92);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(139, 25);
+            this.label1.Size = new System.Drawing.Size(168, 29);
             this.label1.TabIndex = 1;
             this.label1.Text = "Selamat Ujian!";
             // 
             // lblNamaSiswa
             // 
             this.lblNamaSiswa.AutoSize = true;
-            this.lblNamaSiswa.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNamaSiswa.Location = new System.Drawing.Point(391, 90);
+            this.lblNamaSiswa.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNamaSiswa.Location = new System.Drawing.Point(505, 134);
             this.lblNamaSiswa.Name = "lblNamaSiswa";
-            this.lblNamaSiswa.Size = new System.Drawing.Size(192, 29);
+            this.lblNamaSiswa.Size = new System.Drawing.Size(230, 36);
             this.lblNamaSiswa.TabIndex = 1;
             this.lblNamaSiswa.Text = "{ Nama Siswa }";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(394, 147);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(509, 218);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(121, 20);
+            this.label3.Size = new System.Drawing.Size(143, 25);
             this.label3.TabIndex = 1;
             this.label3.Text = "Mata Pelajaran";
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.GhostWhite;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(338, 25);
+            this.button1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(422, 51);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(142, 51);
+            this.button1.Size = new System.Drawing.Size(260, 62);
             this.button1.TabIndex = 2;
             this.button1.Text = "Mulai Ujian";
             this.button1.UseVisualStyleBackColor = false;
@@ -98,47 +98,49 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.SlateBlue;
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Location = new System.Drawing.Point(-2, 277);
+            this.panel1.Location = new System.Drawing.Point(0, 455);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(805, 100);
+            this.panel1.Size = new System.Drawing.Size(1128, 168);
             this.panel1.TabIndex = 3;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(394, 178);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(509, 260);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(56, 20);
+            this.label4.Size = new System.Drawing.Size(69, 25);
             this.label4.TabIndex = 1;
             this.label4.Text = "Waktu";
             // 
             // lblMapel
             // 
             this.lblMapel.AutoSize = true;
-            this.lblMapel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMapel.Location = new System.Drawing.Point(549, 147);
+            this.lblMapel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMapel.Location = new System.Drawing.Point(693, 218);
             this.lblMapel.Name = "lblMapel";
-            this.lblMapel.Size = new System.Drawing.Size(143, 20);
+            this.lblMapel.Size = new System.Drawing.Size(167, 25);
             this.lblMapel.TabIndex = 1;
             this.lblMapel.Text = "{ Mata Pelajaran }";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(549, 178);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(693, 260);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(73, 20);
+            this.label6.Size = new System.Drawing.Size(86, 25);
             this.label6.TabIndex = 1;
             this.label6.Text = "20 menit";
             // 
             // label7
             // 
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(12, 233);
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(12, 398);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(776, 34);
+            this.label7.Size = new System.Drawing.Size(1103, 34);
             this.label7.TabIndex = 1;
             this.label7.Text = "Kerjakan ujian dengan jujur. Semoga mendapatkan hasil yang terbaik!";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -147,7 +149,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 375);
+            this.ClientSize = new System.Drawing.Size(1127, 623);
             this.Controls.Add(this.lblNamaSiswa);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);

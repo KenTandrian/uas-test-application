@@ -2,7 +2,6 @@ C:\Users\User\Source\Repos\KenTandrian\uas-test-application\CBT Application\bin\
 C:\Users\User\Source\Repos\KenTandrian\uas-test-application\CBT Application\bin\Debug\CBT Application.exe
 C:\Users\User\Source\Repos\KenTandrian\uas-test-application\CBT Application\bin\Debug\CBT Application.pdb
 C:\Users\User\Source\Repos\KenTandrian\uas-test-application\CBT Application\obj\Debug\CBT Application.csproj.AssemblyReference.cache
-C:\Users\User\Source\Repos\KenTandrian\uas-test-application\CBT Application\obj\Debug\CBT Application.csproj.SuggestedBindingRedirects.cache
 C:\Users\User\Source\Repos\KenTandrian\uas-test-application\CBT Application\obj\Debug\CBT_Application.Properties.Resources.resources
 C:\Users\User\Source\Repos\KenTandrian\uas-test-application\CBT Application\obj\Debug\CBT Application.csproj.GenerateResource.cache
 C:\Users\User\Source\Repos\KenTandrian\uas-test-application\CBT Application\obj\Debug\CBT Application.csproj.CoreCompileInputs.cache
@@ -18,3 +17,4 @@ C:\Users\User\Source\Repos\KenTandrian\uas-test-application\CBT Application\obj\
 C:\Users\User\Source\Repos\KenTandrian\uas-test-application\CBT Application\obj\Debug\CBT_Application.View.FrmHasilUjian.resources
 C:\Users\User\Source\Repos\KenTandrian\uas-test-application\CBT Application\obj\Debug\CBT_Application.View.FrmAdminPanel.resources
 C:\Users\User\Source\Repos\KenTandrian\uas-test-application\CBT Application\obj\Debug\CBT_Application.View.FrmConnection.resources
+C:\Users\User\Source\Repos\KenTandrian\uas-test-application\CBT Application\obj\Debug\CBT_Application.View.FrmInputEmail.resources

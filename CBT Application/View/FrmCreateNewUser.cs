@@ -21,10 +21,12 @@ namespace CBT_Application.View
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
         }
 
-        public bool Run(FrmCreateNewUser form)
+        User passingUser = new User();
+        string passAsli = string.Empty;
+        public (User, string, bool) Run(FrmCreateNewUser form)
         {
             form.ShowDialog();
-            return true;
+            return (passingUser, passAsli, chkSendEmail.Checked);
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -73,6 +75,8 @@ namespace CBT_Application.View
                         IDUser = txtIDUser.Text,
                         PassUser = Helper.GenerateHash256(txtPassword.Text)
                     };
+                    passingUser = user;
+                    passAsli = txtPassword.Text;
                     using (var dal = new DALUser())
                     {
                         if (dal.CreateNew(user))
@@ -86,6 +90,7 @@ namespace CBT_Application.View
                             txtNama.Focus();
                         }
                     }
+                    this.DialogResult = DialogResult.OK;
                 }
                 catch (Exception ex)
                 {

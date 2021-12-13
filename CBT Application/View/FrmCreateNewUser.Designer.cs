@@ -46,6 +46,7 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
+            this.chkSendEmail = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -216,9 +217,10 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(576, 298);
+            this.btnSave.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.Location = new System.Drawing.Point(556, 305);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(93, 29);
+            this.btnSave.Size = new System.Drawing.Size(113, 40);
             this.btnSave.TabIndex = 7;
             this.btnSave.Text = "Simpan";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -244,11 +246,24 @@
             this.label9.TabIndex = 10;
             this.label9.Text = "COMPUTER-BASED TEST APPLICATION";
             // 
+            // chkSendEmail
+            // 
+            this.chkSendEmail.AutoSize = true;
+            this.chkSendEmail.Checked = true;
+            this.chkSendEmail.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkSendEmail.Location = new System.Drawing.Point(24, 317);
+            this.chkSendEmail.Name = "chkSendEmail";
+            this.chkSendEmail.Size = new System.Drawing.Size(251, 21);
+            this.chkSendEmail.TabIndex = 10;
+            this.chkSendEmail.Text = "Kirim Email Konfirmasi Pendaftaran";
+            this.chkSendEmail.UseVisualStyleBackColor = true;
+            // 
             // FrmCreateNewUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(696, 350);
+            this.ClientSize = new System.Drawing.Size(696, 369);
+            this.Controls.Add(this.chkSendEmail);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.cboTopik);
@@ -299,5 +314,6 @@
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.CheckBox chkSendEmail;
     }
 }

@@ -66,6 +66,7 @@
     <Compile Include="DAL\DALTestLog.cs" />
     <Compile Include="DAL\DALUser.cs" />
     <Compile Include="Entity\ConnParameter.cs" />
+    <Compile Include="Entity\EmailCreds.cs" />
     <Compile Include="Entity\User.cs" />
     <Compile Include="Entity\UserExamResult.cs" />
     <Compile Include="Helper.cs" />
@@ -99,6 +100,12 @@
     <Compile Include="View\FrmInfoUjian.Designer.cs">
       <DependentUpon>FrmInfoUjian.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\FrmInputEmail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmInputEmail.Designer.cs">
+      <DependentUpon>FrmInputEmail.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\FrmUjian.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +135,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\FrmInfoUjian.resx">
       <DependentUpon>FrmInfoUjian.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmInputEmail.resx">
+      <DependentUpon>FrmInputEmail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FrmUjian.resx">
       <DependentUpon>FrmUjian.cs</DependentUpon>

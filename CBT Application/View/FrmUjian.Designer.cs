@@ -56,6 +56,12 @@
             this.lblSubject = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.pnlQuestion = new System.Windows.Forms.Panel();
+            this.prbProgress = new System.Windows.Forms.ProgressBar();
             this.btn10 = new CBT_Application.Controls.RoundedButton();
             this.btn9 = new CBT_Application.Controls.RoundedButton();
             this.btn5 = new CBT_Application.Controls.RoundedButton();
@@ -69,12 +75,6 @@
             this.roundedButton1 = new CBT_Application.Controls.RoundedButton();
             this.roundedButton3 = new CBT_Application.Controls.RoundedButton();
             this.roundedButton2 = new CBT_Application.Controls.RoundedButton();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.pnlQuestion = new System.Windows.Forms.Panel();
-            this.prbProgress = new System.Windows.Forms.ProgressBar();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -91,7 +91,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1018, 49);
+            this.panel1.Size = new System.Drawing.Size(999, 49);
             this.panel1.TabIndex = 0;
             // 
             // label1
@@ -110,7 +110,7 @@
             this.btnNext.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnNext.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnNext.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNext.Location = new System.Drawing.Point(163, 458);
+            this.btnNext.Location = new System.Drawing.Point(163, 546);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(127, 40);
             this.btnNext.TabIndex = 5;
@@ -167,7 +167,7 @@
             this.btnFinish.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnFinish.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnFinish.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFinish.Location = new System.Drawing.Point(768, 459);
+            this.btnFinish.Location = new System.Drawing.Point(753, 547);
             this.btnFinish.Name = "btnFinish";
             this.btnFinish.Size = new System.Drawing.Size(157, 40);
             this.btnFinish.TabIndex = 16;
@@ -180,7 +180,7 @@
             this.btnPrevious.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnPrevious.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnPrevious.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPrevious.Location = new System.Drawing.Point(30, 459);
+            this.btnPrevious.Location = new System.Drawing.Point(30, 547);
             this.btnPrevious.Name = "btnPrevious";
             this.btnPrevious.Size = new System.Drawing.Size(127, 40);
             this.btnPrevious.TabIndex = 4;
@@ -235,7 +235,7 @@
             this.lblKalimatSoal.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblKalimatSoal.Location = new System.Drawing.Point(26, 90);
             this.lblKalimatSoal.Name = "lblKalimatSoal";
-            this.lblKalimatSoal.Size = new System.Drawing.Size(918, 134);
+            this.lblKalimatSoal.Size = new System.Drawing.Size(903, 134);
             this.lblKalimatSoal.TabIndex = 5;
             this.lblKalimatSoal.Text = "----------";
             // 
@@ -282,9 +282,9 @@
             this.panel2.BackColor = System.Drawing.Color.SlateBlue;
             this.panel2.Controls.Add(this.lblConnected);
             this.panel2.Controls.Add(this.label9);
-            this.panel2.Location = new System.Drawing.Point(0, 611);
+            this.panel2.Location = new System.Drawing.Point(0, 711);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1241, 144);
+            this.panel2.Size = new System.Drawing.Size(1222, 58);
             this.panel2.TabIndex = 0;
             // 
             // lblConnected
@@ -292,7 +292,7 @@
             this.lblConnected.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblConnected.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblConnected.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblConnected.Location = new System.Drawing.Point(1052, 6);
+            this.lblConnected.Location = new System.Drawing.Point(1033, 6);
             this.lblConnected.Name = "lblConnected";
             this.lblConnected.Size = new System.Drawing.Size(160, 17);
             this.lblConnected.TabIndex = 1;
@@ -306,7 +306,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label9.Location = new System.Drawing.Point(18, 6);
+            this.label9.Location = new System.Drawing.Point(18, 8);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(349, 16);
             this.label9.TabIndex = 1;
@@ -318,7 +318,7 @@
             this.panel3.BackColor = System.Drawing.SystemColors.Desktop;
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.lblTimer);
-            this.panel3.Location = new System.Drawing.Point(1017, 0);
+            this.panel3.Location = new System.Drawing.Point(998, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(224, 49);
             this.panel3.TabIndex = 0;
@@ -347,7 +347,7 @@
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.Controls.Add(this.lblSubject);
             this.panel4.Controls.Add(this.label4);
-            this.panel4.Location = new System.Drawing.Point(992, 74);
+            this.panel4.Location = new System.Drawing.Point(979, 74);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(220, 50);
             this.panel4.TabIndex = 6;
@@ -400,10 +400,96 @@
             this.panel5.Controls.Add(this.label7);
             this.panel5.Controls.Add(this.label5);
             this.panel5.Controls.Add(this.label6);
-            this.panel5.Location = new System.Drawing.Point(992, 144);
+            this.panel5.Location = new System.Drawing.Point(979, 144);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(220, 450);
+            this.panel5.Size = new System.Drawing.Size(220, 538);
             this.panel5.TabIndex = 6;
+            // 
+            // label8
+            // 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label8.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label8.Location = new System.Drawing.Point(72, 486);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(116, 31);
+            this.label8.TabIndex = 7;
+            this.label8.Text = "Not Attempted";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label7
+            // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label7.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label7.Location = new System.Drawing.Point(72, 450);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(116, 31);
+            this.label7.TabIndex = 2;
+            this.label7.Text = "Current";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label5.Location = new System.Drawing.Point(72, 414);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(116, 31);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Answered";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label6
+            // 
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label6.Location = new System.Drawing.Point(11, 9);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(116, 31);
+            this.label6.TabIndex = 2;
+            this.label6.Text = "Quick View";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // pnlQuestion
+            // 
+            this.pnlQuestion.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlQuestion.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pnlQuestion.Controls.Add(this.prbProgress);
+            this.pnlQuestion.Controls.Add(this.btnNext);
+            this.pnlQuestion.Controls.Add(this.lblNomor);
+            this.pnlQuestion.Controls.Add(this.btnFinish);
+            this.pnlQuestion.Controls.Add(this.btnPrevious);
+            this.pnlQuestion.Controls.Add(this.btnD);
+            this.pnlQuestion.Controls.Add(this.label2);
+            this.pnlQuestion.Controls.Add(this.btnC);
+            this.pnlQuestion.Controls.Add(this.btnB);
+            this.pnlQuestion.Controls.Add(this.btnA);
+            this.pnlQuestion.Controls.Add(this.lblPilihanA);
+            this.pnlQuestion.Controls.Add(this.lblPilihanB);
+            this.pnlQuestion.Controls.Add(this.lblPilihanC);
+            this.pnlQuestion.Controls.Add(this.lblPilihanD);
+            this.pnlQuestion.Controls.Add(this.lblKalimatSoal);
+            this.pnlQuestion.Location = new System.Drawing.Point(21, 74);
+            this.pnlQuestion.Name = "pnlQuestion";
+            this.pnlQuestion.Size = new System.Drawing.Size(936, 608);
+            this.pnlQuestion.TabIndex = 7;
+            // 
+            // prbProgress
+            // 
+            this.prbProgress.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.prbProgress.Location = new System.Drawing.Point(0, 0);
+            this.prbProgress.Name = "prbProgress";
+            this.prbProgress.Size = new System.Drawing.Size(936, 10);
+            this.prbProgress.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
+            this.prbProgress.TabIndex = 17;
             // 
             // btn10
             // 
@@ -618,7 +704,7 @@
             this.roundedButton1.FlatAppearance.BorderSize = 0;
             this.roundedButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.roundedButton1.ForeColor = System.Drawing.Color.White;
-            this.roundedButton1.Location = new System.Drawing.Point(26, 326);
+            this.roundedButton1.Location = new System.Drawing.Point(26, 414);
             this.roundedButton1.Name = "roundedButton1";
             this.roundedButton1.Size = new System.Drawing.Size(30, 30);
             this.roundedButton1.TabIndex = 17;
@@ -639,7 +725,7 @@
             this.roundedButton3.FlatAppearance.BorderSize = 0;
             this.roundedButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.roundedButton3.ForeColor = System.Drawing.Color.White;
-            this.roundedButton3.Location = new System.Drawing.Point(26, 398);
+            this.roundedButton3.Location = new System.Drawing.Point(26, 486);
             this.roundedButton3.Name = "roundedButton3";
             this.roundedButton3.Size = new System.Drawing.Size(30, 30);
             this.roundedButton3.TabIndex = 17;
@@ -660,7 +746,7 @@
             this.roundedButton2.FlatAppearance.BorderSize = 0;
             this.roundedButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.roundedButton2.ForeColor = System.Drawing.Color.White;
-            this.roundedButton2.Location = new System.Drawing.Point(26, 362);
+            this.roundedButton2.Location = new System.Drawing.Point(26, 450);
             this.roundedButton2.Name = "roundedButton2";
             this.roundedButton2.Size = new System.Drawing.Size(30, 30);
             this.roundedButton2.TabIndex = 17;
@@ -668,97 +754,11 @@
             this.roundedButton2.TextColor = System.Drawing.Color.White;
             this.roundedButton2.UseVisualStyleBackColor = false;
             // 
-            // label8
-            // 
-            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label8.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label8.Location = new System.Drawing.Point(72, 398);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(116, 31);
-            this.label8.TabIndex = 7;
-            this.label8.Text = "Not Attempted";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label7
-            // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label7.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label7.Location = new System.Drawing.Point(72, 362);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(116, 31);
-            this.label7.TabIndex = 2;
-            this.label7.Text = "Current";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label5
-            // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label5.Location = new System.Drawing.Point(72, 326);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(116, 31);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Answered";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label6
-            // 
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label6.Location = new System.Drawing.Point(11, 9);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(116, 31);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "Quick View";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // pnlQuestion
-            // 
-            this.pnlQuestion.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlQuestion.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.pnlQuestion.Controls.Add(this.prbProgress);
-            this.pnlQuestion.Controls.Add(this.btnNext);
-            this.pnlQuestion.Controls.Add(this.lblNomor);
-            this.pnlQuestion.Controls.Add(this.btnFinish);
-            this.pnlQuestion.Controls.Add(this.btnPrevious);
-            this.pnlQuestion.Controls.Add(this.btnD);
-            this.pnlQuestion.Controls.Add(this.label2);
-            this.pnlQuestion.Controls.Add(this.btnC);
-            this.pnlQuestion.Controls.Add(this.btnB);
-            this.pnlQuestion.Controls.Add(this.btnA);
-            this.pnlQuestion.Controls.Add(this.lblPilihanA);
-            this.pnlQuestion.Controls.Add(this.lblPilihanB);
-            this.pnlQuestion.Controls.Add(this.lblPilihanC);
-            this.pnlQuestion.Controls.Add(this.lblPilihanD);
-            this.pnlQuestion.Controls.Add(this.lblKalimatSoal);
-            this.pnlQuestion.Location = new System.Drawing.Point(21, 74);
-            this.pnlQuestion.Name = "pnlQuestion";
-            this.pnlQuestion.Size = new System.Drawing.Size(951, 520);
-            this.pnlQuestion.TabIndex = 7;
-            // 
-            // prbProgress
-            // 
-            this.prbProgress.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.prbProgress.Location = new System.Drawing.Point(0, 0);
-            this.prbProgress.Name = "prbProgress";
-            this.prbProgress.Size = new System.Drawing.Size(951, 10);
-            this.prbProgress.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
-            this.prbProgress.TabIndex = 17;
-            // 
             // FrmUjian
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1238, 643);
+            this.ClientSize = new System.Drawing.Size(1222, 753);
             this.Controls.Add(this.pnlQuestion);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
