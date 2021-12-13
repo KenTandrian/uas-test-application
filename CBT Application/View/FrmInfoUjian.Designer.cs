@@ -45,7 +45,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::CBT_Application.Properties.Resources.exam;
-            this.pictureBox1.Location = new System.Drawing.Point(141, 42);
+            this.pictureBox1.Location = new System.Drawing.Point(204, 58);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(300, 300);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -55,30 +55,30 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(506, 92);
+            this.label1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(569, 108);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(168, 29);
+            this.label1.Size = new System.Drawing.Size(169, 32);
             this.label1.TabIndex = 1;
             this.label1.Text = "Selamat Ujian!";
             // 
             // lblNamaSiswa
             // 
             this.lblNamaSiswa.AutoSize = true;
-            this.lblNamaSiswa.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNamaSiswa.Location = new System.Drawing.Point(505, 134);
+            this.lblNamaSiswa.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNamaSiswa.Location = new System.Drawing.Point(568, 150);
             this.lblNamaSiswa.Name = "lblNamaSiswa";
-            this.lblNamaSiswa.Size = new System.Drawing.Size(230, 36);
+            this.lblNamaSiswa.Size = new System.Drawing.Size(216, 39);
             this.lblNamaSiswa.TabIndex = 1;
             this.lblNamaSiswa.Text = "{ Nama Siswa }";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(509, 218);
+            this.label3.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(572, 234);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(143, 25);
+            this.label3.Size = new System.Drawing.Size(149, 26);
             this.label3.TabIndex = 1;
             this.label3.Text = "Mata Pelajaran";
             // 
@@ -106,30 +106,30 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(509, 260);
+            this.label4.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(572, 276);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(69, 25);
+            this.label4.Size = new System.Drawing.Size(69, 26);
             this.label4.TabIndex = 1;
             this.label4.Text = "Waktu";
             // 
             // lblMapel
             // 
             this.lblMapel.AutoSize = true;
-            this.lblMapel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMapel.Location = new System.Drawing.Point(693, 218);
+            this.lblMapel.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMapel.Location = new System.Drawing.Point(756, 234);
             this.lblMapel.Name = "lblMapel";
-            this.lblMapel.Size = new System.Drawing.Size(167, 25);
+            this.lblMapel.Size = new System.Drawing.Size(172, 26);
             this.lblMapel.TabIndex = 1;
             this.lblMapel.Text = "{ Mata Pelajaran }";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(693, 260);
+            this.label6.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(756, 276);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(86, 25);
+            this.label6.Size = new System.Drawing.Size(91, 26);
             this.label6.TabIndex = 1;
             this.label6.Text = "20 menit";
             // 
