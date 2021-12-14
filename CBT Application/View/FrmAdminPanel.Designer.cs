@@ -569,7 +569,6 @@
             // 
             // lblStatus
             // 
-            this.lblStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblStatus.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblStatus.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblStatus.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -589,12 +588,11 @@
             this.panel2.Controls.Add(this.lblStatus);
             this.panel2.Location = new System.Drawing.Point(-2, 589);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1131, 35);
+            this.panel2.Size = new System.Drawing.Size(1131, 72);
             this.panel2.TabIndex = 2;
             // 
             // label12
             // 
-            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
