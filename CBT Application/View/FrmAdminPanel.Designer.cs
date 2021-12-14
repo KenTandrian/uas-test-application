@@ -588,7 +588,7 @@
             this.panel2.Controls.Add(this.lblStatus);
             this.panel2.Location = new System.Drawing.Point(-2, 589);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1131, 72);
+            this.panel2.Size = new System.Drawing.Size(1138, 72);
             this.panel2.TabIndex = 2;
             // 
             // label12

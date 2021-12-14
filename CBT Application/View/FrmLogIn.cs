@@ -132,13 +132,5 @@ namespace CBT_Application
                 }
             }
         }
-
-        private void FrmLogIn_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            if (MessageBox.Show("Are you sure you want to close?", "Confirm Exit", MessageBoxButtons.YesNo) == DialogResult.No)
-            {
-                e.Cancel = true;
-            }
-        }
     }
 }
