@@ -21,7 +21,8 @@ Github Repo:
 https://github.com/KenTandrian/uas-test-application
 
 ## Technologies
-[![C#](https://img.shields.io/badge/-c%23-black?style=flat-square&logo=c-sharp&logoColor=%23239120)](https://github.com/KenTandrian?tab=repositories&language=c%23)
+[![.Net](https://img.shields.io/badge/.NET-5C2D91?style=for-the-badge&logo=.net&logoColor=white)](https://github.com/KenTandrian?tab=repositories)
+[![C#](https://img.shields.io/badge/-c%23-%23239120?style=for-the-badge&logo=c-sharp&logoColor=white)](https://github.com/KenTandrian?tab=repositories&language=c%23)
 
 ## Dependencies
 [`Dapper`](https://github.com/DapperLib/Dapper) v2.0.123\
